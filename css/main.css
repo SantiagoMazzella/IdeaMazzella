@@ -7,10 +7,6 @@
     
 }
 
-body{
-    background: rgb(255,247,247);
-background: linear-gradient(90deg, rgba(255,247,247,1) 0%, rgba(160,232,220,1) 78%);
-}
 
 body{
     background: rgb(255,247,247);
@@ -24,7 +20,7 @@ header{
     display: flex;
     flex-direction: row;
     border-bottom: 3px solid rgb(158, 155, 155);
-    background-color: rgb(182, 176, 176);
+    background-color: #fff;
     align-items: center;
     justify-content: space-between;
 }
@@ -35,7 +31,7 @@ header nav ul li{
 
 header nav ul li:hover{
     transform: scale(1.1);
-    box-shadow: #383970 0.2rem 0.2rem;
+    box-shadow: #6b0707 0.2rem 0.2rem;
 }
 
 .listaImg{
@@ -49,16 +45,19 @@ header nav ul li:hover{
 }
 
 .menuLista{
-    background-color: #e28260;
+    background-color: rgb(211, 211, 211);
     margin: 0.3rem;
-    padding: 0.3rem;
+    padding: 0.7rem;
     text-decoration: none;
     font-size: 0.52rem;
-    border: 1px #e28260 solid;
-    border-radius: 20%;
+    border: 2px #500808 solid;
+    border-radius: 40%;
 }
 
+
+
 .item{
+    font-weight: bold;
     color: black;
     text-decoration: none;
 }
@@ -82,7 +81,7 @@ header nav ul li:hover{
 
 .tituloIndex{
     grid-area: titulo;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-left: 2rem;
     text-align: center;
     color: #383970;
@@ -94,8 +93,7 @@ header nav ul li:hover{
     font-size: 1rem;
     text-align: center;
     padding: 5rem;
-
-    color: #17A589;
+    color: #eb6533;
 }
 
  footer{
@@ -393,9 +391,10 @@ header nav ul li:hover{
     }
     
     .parrafoIndex{
+        font-weight: bold;
         font-size: 0.7rem;
         text-align:center;
-        color: #17A589;
+        color: #eb6533;
     }
 
     .redesSociales{
@@ -417,13 +416,15 @@ header nav ul li:hover{
         display: grid;
         grid-template-areas: "imagen titulo"
                              "imagen parrafo ";
-        column-gap: 2rem;
+        column-gap: 0rem;
 
     }
 
+
+
     .fotoIndex{
         display: flex;
-        width: 40rem;
+        width: 39rem;
     }
 
     .tituloIndex{
