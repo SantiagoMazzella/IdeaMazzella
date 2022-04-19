@@ -10,19 +10,15 @@
 
 body{
     background: rgb(255,247,247);
-background: linear-gradient(90deg, rgba(255,247,247,1) 0%, rgba(160,232,220,1) 78%);
+    background: linear-gradient(90deg, rgba(255,247,247,1) 0%, rgba(160,232,220,1) 78%);
 }
 
 header{
     z-index: 9999;
     position: sticky;
     top: 0%;
-    display: flex;
-    flex-direction: row;
-    border-bottom: 3px solid rgb(158, 155, 155);
     background-color: #fff;
-    align-items: center;
-    justify-content: space-between;
+    border-bottom: 1px grey solid ;   
 }
 
 header nav ul li{
@@ -44,14 +40,16 @@ header nav ul li:hover{
     
 }
 
+.botones{
+    margin-right: 2rem;
+}
+
 .menuLista{
     background-color: rgb(211, 211, 211);
-    margin: 0.3rem;
-    padding: 0.7rem;
     text-decoration: none;
     font-size: 0.52rem;
     border: 2px #500808 solid;
-    border-radius: 40%;
+    
 }
 
 
@@ -82,7 +80,6 @@ header nav ul li:hover{
 .tituloIndex{
     grid-area: titulo;
     font-size: 1rem;
-    margin-left: 2rem;
     text-align: center;
     color: #383970;
     padding: 1rem;
@@ -106,6 +103,11 @@ header nav ul li:hover{
     display: inline-block;
     flex-direction: column;
 }
+
+.linksRedes{
+    text-decoration: none;
+}
+
 .redesSociales a img{
     width: 17%;
 }
@@ -198,7 +200,7 @@ header nav ul li:hover{
 .programadorConocimientos{
     display:none;
 }
-
+/*
 .contConocimientos{
     display: grid;
     grid-template-areas:"titulo titulo"
@@ -206,19 +208,26 @@ header nav ul li:hover{
                         "conCss conCss"
                         "subtit subtit";
 }
-
+*/
 .titulosHtml{
     grid-area: titulo;
     margin-bottom: 3rem;
 }
 
-.imagenHtml{
-    width: 4.2rem;
-    margin-left: 0.3rem;
+.html-carrousel{
+    height: 30vh;
 }
 
-.barraHtml{
-    width: 13.5rem;
+.css-carrousel{
+    height: 30vh;
+}
+
+.git-carrousel{
+    height: 20vh;
+}
+
+.bootstap-carrousel{
+    height: 30vh;
 }
 
 .conocimientosHtml{
@@ -229,27 +238,9 @@ header nav ul li:hover{
     margin-bottom: 3rem;
 }
 
-.imagenCss{
-    width: 4.7rem;
-}
 
-.barraCss{
-    width: 12rem;
-    height: 2.25rem;
-    margin-right: 0.7rem;
-}
 
-.conocimientosCss{
-    grid-area: conCss;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 
-.tituloConocimiento{
-    text-align: center;
-    color: #eb6533;
-}
 
 .textoConocimiento{
     text-align: center;
@@ -319,45 +310,36 @@ header nav ul li:hover{
 /*acá termina el Css de Sobre mi y arranca el de Contacto */
 
 
-
-.redesSocialesContactame{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 200px;
-    
+.redes-sociales a{
+    text-decoration: none;
+    margin-bottom: 3rem;
 }
 
-.logos{
-    position: relative;
-    bottom: 250px;
-    margin: 50px;
-    
+.redes-sociales a{
+    width: 50%;
 }
 
+.redes-sociales a img{
+    width: 55%;
+}
 
 .formulario{
-    position: relative;
-    top: 350px;
-    left: 410px;
-    width: 600px;
-    height: 300px;
-    border: 3px solid #17A589;
+    margin-top: 2rem;
+    margin-left: 16%;
+    height: 90%;
+    width: 70%;
+    border: 2px solid #17A589;
+    text-align: center;
 }
 
 #consultaFormulario{
-    width: 500px;
-    height: 150px;    
+    width: 90%;
 }
+
 
 /* empiezan las mediaqueries*/
 
-@media only screen and (min-width:350px){
-    .menuLista{
-        font-size: 0.75rem;
-    }
 
-}
 
 
 @media only screen and (min-width:650px){
@@ -383,7 +365,6 @@ header nav ul li:hover{
     }
 
     .tituloIndex{
-
         margin-top: 17vh;
         font-size: 1.5rem;
         text-align: center;
@@ -625,3 +606,20 @@ header nav ul li:hover{
     }
 
 }
+/* fin de la mediaqueries sobre mi e inicio de contactame*/
+
+
+@media only screen and (min-width:768px){
+
+    .redes-sociales a img{
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width:1200px){
+
+    .redes-sociales a img{
+        width: 30%;
+    }
+}
+
