@@ -1,0 +1,537 @@
+@import "utilities/variables";
+@import "layout/nav-background";
+
+
+
+/*estilos Index */
+
+.contenedor{
+    display: grid;
+    grid-template-areas: "imagen "
+                         "contenido"
+                         "footer ";
+    justify-content: center;
+
+    .contenedorMain{
+
+        .fotoIndex{
+            grid-area: imagen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slogan1{
+            grid-area: contenido;
+            display: grid;
+            grid-template-areas: "titulo"
+                                 "parrafo";
+    
+            .tituloIndex{
+                grid-area: titulo;
+                font-size: 1rem;
+                text-align: center;
+                color: $color-titulos;
+                padding: 1rem;
+            }
+            
+            .parrafoIndex{
+                grid-area: parrafo;
+                font-size: 1rem;
+                text-align: center;
+                padding: 5rem;
+                color: $color-parrafos;
+            }
+        }
+    }
+
+    footer{
+        grid-area: footer;
+        .redesSociales{
+        display: flex;
+        display: inline-block;
+        flex-direction: column;
+            .linksRedes{
+                text-decoration: none;
+                img{
+                    width: 17%;
+                }
+            }
+        }
+        
+    }
+    @media only screen and (min-width:650px){
+
+        
+    
+        .contenedorMain{
+            display: grid;
+            grid-template-areas: "imagen contenido"
+                                 "imagen contenido ";
+                                 
+            justify-content: center;
+            grid-template-columns: 40% 60%;
+            column-gap: 2rem;
+    
+            .fotoIndex{
+                display: flex;
+                width: 150%;
+                
+            }
+    
+            .slogan1{
+    
+                .tituloIndex{
+                    margin-top: 17vh;
+                    font-size: 1.5rem;
+                    text-align: center;
+                    color: $color-titulos;
+                }
+                
+                .parrafoIndex{
+                    font-weight: bold;
+                    font-size: 0.7rem;
+                    text-align:center;
+                    color: $color-parrafos;
+                }
+            }
+        }
+    
+        .redesSociales{
+            margin-top: 33rem;
+        }
+    
+        .redesSociales a img{
+            width: 60%;
+        }
+        
+    }
+    
+    @media only screen and (min-width:1024px){
+    
+    
+        .contenedorMain{
+            display: grid;
+            grid-template-areas: "imagen contenido"
+                                 "imagen contenido ";
+                                 
+            justify-content: center;
+            grid-template-columns: 40% 60%;
+            column-gap: 2rem;
+    
+            .fotoIndex{
+                display: flex;
+                width: 39rem;
+                
+            }
+    
+            .slogan1{
+    
+                .tituloIndex{
+                    font-size: 2rem;
+                    padding: 3rem;
+                }
+                
+                .parrafoIndex{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+         
+        .redesSociales a img{
+            width: 70%;
+        }
+    }
+}
+
+
+
+ /*acá termina el Css del index y arranca el de "trabajos"*/
+
+
+.contenedorTrabajos{
+
+    @media only screen and (max-width:650px){
+        display: grid;
+    grid-template-areas: "titulo"
+                         "subtitulo1"
+                         "foto1"
+                         "parrafo1"
+                         "subtitulo2"
+                         "foto2"
+                         "parrafo2";
+
+    
+
+        .titulosHtml{
+        grid-area: titulo;
+        color: $color-titulos;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;  
+        font-size: 2rem;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        }
+        .imgPag1{
+        grid-area: foto1;
+        margin-top: 2.2rem;
+        margin-bottom: 2.2rem;
+        width: 15rem;
+        display: flex;
+        justify-self: center;
+        border-radius: 10%;
+        }
+
+        .tituloPrimerProyect {
+            text-align: center;
+            grid-area: subtitulo1;
+            color: $color-titulos;
+        }
+
+        .parrafoPrimerProyect {
+            grid-area: parrafo1;
+            text-align: center;
+            padding: 2.5rem;
+            color: $color-parrafos;
+        }
+
+        .imgPag2 {
+            grid-area: foto2;
+            margin-top: 2.2rem;
+            margin-bottom: 2.2rem;
+            width: 15rem;
+            display: flex;
+            justify-self: center;
+            border-radius: 10%;
+     }
+
+        .tituloSegundoProyect {
+            grid-area: subtitulo2;
+            text-align: center;
+            color: $color-titulos;
+        }
+
+        .parrafoSegundoProyect {
+            grid-area: parrafo2;
+            text-align: center;
+            padding: 2.5rem;
+            color: $color-parrafos;
+        }
+
+        .linkPag1{
+            text-decoration: none;
+            color: $color-terciario;
+        }
+        
+        .linkPag2{
+            text-decoration: none;
+            color: $color-terciario;
+        }
+    }    
+ 
+} .contenedorTrabajos{
+    @media only screen and (min-width:650px){
+        display: grid;
+    grid-template-areas: "titulo titulo"
+                        "foto1 subtitulo1"
+                        "foto1 parrafo1"
+                        "subtitulo2 foto2"
+                        "parrafo2 foto2";
+    .titulosHtml{
+        grid-area: titulo;
+        color: $color-titulos;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;  
+        font-size: 2rem;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        }
+        .imgPag1{
+        grid-area: foto1;
+        margin-top: 2.2rem;
+        margin-bottom: 2.2rem;
+        width: 17rem;
+        display: flex;
+        justify-self: center;
+        border-radius: 10%;
+        }
+
+        .tituloPrimerProyect {
+            text-align: center;
+            grid-area: subtitulo1;
+            color: $color-titulos;
+        }
+
+        .parrafoPrimerProyect {
+            grid-area: parrafo1;
+            text-align: center;
+            padding: 2.5rem;
+            color: $color-parrafos;
+        }
+
+        .imgPag2 {
+            grid-area: foto2;
+            margin-top: 2.2rem;
+            margin-bottom: 2.2rem;
+            width: 17rem;
+            display: flex;
+            justify-self: center;
+            border-radius: 10%;
+        }
+
+        .tituloSegundoProyect {
+            grid-area: subtitulo2;
+            text-align: center;
+            color: $color-titulos;
+        }
+
+        .parrafoSegundoProyect {
+            grid-area: parrafo2;
+            text-align: center;
+            padding: 2.5rem;
+            color: $color-parrafos;
+        }
+
+        .linkPag1{
+            text-decoration: none;
+            color: $color-terciario;
+        }
+        
+        .linkPag2{
+            text-decoration: none;
+            color: $color-terciario
+        }
+    }
+} .contenedorSobreMi{
+    @media only screen and (min-width:1024px){
+        grid-template-areas: "titulo foto"
+                             "parrafo foto";
+        grid-template-columns: 1fr 1fr;
+        
+        .fotoYo{
+            align-self: center;
+        }
+    
+        .fotoYo img{
+            width: 80%;
+        }
+    
+        .subTituloSobreMi{
+            font-size: 1.8rem;
+        }
+    
+        .contenidoSobreMi{
+            font-size: 1.1rem;
+        }
+    }
+}    
+/*acá termina el Css del Trabajos y arranca el de "Conocimientos" */
+
+.titulosHtml{
+    grid-area: titulo;
+        color: $color-titulos;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;  
+        font-size: 2rem;
+        margin-top: 30px;
+        margin-bottom: 30px;
+}
+.contConocimientos{
+    .carousel{
+        .carousel-inner{
+            .carousel-item{
+
+                .html-carrousel{
+                    height: 30vh;
+                }
+                
+                .css-carrousel{
+                    height: 30vh;
+                }
+                
+                .git-carrousel{
+                    height: 20vh;
+                }
+                
+                .bootstap-carrousel{
+                    height: 30vh;
+                }
+            }
+        }
+    }
+    .contenidoConocimiento{
+        grid-area: subtit;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        padding: 5rem;
+        .textoConocimiento{
+            text-align: center;
+            color: $color-parrafos;
+        }
+    }
+}
+
+.footerConocimientos{
+    margin-top: 16.5rem;
+    .linksRedes{
+        text-decoration: none;
+    }
+}
+
+/*acá termina el Css de conocimientos y arranca el de Sobre mi */
+
+.tituloSobreMi{
+        color: $color-titulos;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;  
+        font-size: 2rem;
+        margin-top: 30px;
+        margin-bottom: 30px;
+}
+.contenedorSobreMi{
+    @media only screen and (max-width:650px){
+        display: grid;
+        grid-template-areas: "foto foto"
+                            "titulo titulo"
+                            "parrafo parrafo";
+
+        .fotoYo{
+            text-align: center;
+            grid-area: foto;
+            img{
+                height: 90%;
+            }
+        }
+
+        .subTituloSobreMi{
+            grid-area: titulo;
+            font-size: 1.5rem;
+            text-align: center;
+            color: $color-terciario;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contenidoSobreMi{
+            padding: 1.7rem;
+            grid-area: parrafo;
+            text-align: center;
+            color: $color-parrafos;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+}  .contenedorSobreMi{
+    @media only screen and (min-width:650px){
+        display: grid;
+        grid-template-areas: "foto foto"
+                            "titulo titulo"
+                            "parrafo parrafo";
+
+        .fotoYo{
+            text-align: center;
+            grid-area: foto;
+            img{
+                height: 90%;
+            }
+        }
+
+        .subTituloSobreMi{
+            grid-area: titulo;
+            font-size: 1.5rem;
+            text-align: center;
+            color: $color-terciario;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contenidoSobreMi{
+            padding-left: 8rem;
+            padding-right: 8rem;
+            grid-area: parrafo;
+            text-align: center;
+            color: $color-parrafos;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tituloSobreMi{
+            font-size: 3rem;
+        }
+
+    }
+
+}  .contenedorSobreMi{
+        @media only screen and (min-width:1024px){
+
+        
+        grid-template-areas: "titulo foto"
+                             "parrafo foto";
+        grid-template-columns: 1fr 1fr;
+        
+        .fotoYo{
+            align-self: center;
+        }
+    
+        .fotoYo img{
+            width: 80%;
+        }
+    
+        .subTituloSobreMi{
+            font-size: 1.8rem;
+        }
+    
+        .contenidoSobreMi{
+            font-size: 1.1rem;
+        }
+    }
+
+}
+/*acá termina el Css de Sobre mi y arranca el de Contacto */
+
+.redes-sociales a{
+    text-decoration: none;
+    margin-bottom: 3rem;
+    width: 50%;
+    .redes-sociales a img{
+        width: 55%;
+    }
+    
+}
+
+
+
+.formulario{
+    margin-top: 2rem;
+    margin-left: 16%;
+    height: 90%;
+    width: 70%;
+    border: 2px solid #17A589;
+    text-align: center;
+    #consultaFormulario{
+        width: 90%;
+    }
+} 
+
+@media only screen and (min-width:768px){
+
+    .redes-sociales a img{
+        width: 45%;
+    }
+    
+}
+
+@media only screen and (min-width:1200px){
+
+    .redes-sociales a img{
+        width: 30%;
+    }
+    
+}

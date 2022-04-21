@@ -1,0 +1,42 @@
+header{
+    z-index: 9999;
+    position: sticky;
+    top: 0%;
+    background-color: #fff;
+    border-bottom: 1px grey solid ; 
+    nav{
+        ul{
+            li{
+                transition: 1s; 
+                &:hover{
+                    transform: scale(1.1);
+                    box-shadow: #6b0707 0.2rem 0.2rem;
+                }
+
+            }
+        }
+    } 
+    div{
+        ul{
+            li{
+                a{
+                    background-color: rgb(211, 211, 211);
+                    text-decoration: none;
+                    font-size: 1rem;
+                    border: 2px #500808 solid;
+                }
+                .menu{
+                    display: flex;
+                    list-style: none;
+                    
+                }
+            }
+        }
+    } 
+    
+}  
+
+body{
+    background: rgb(255,247,247);
+    background: linear-gradient(90deg, rgba(255,247,247,1) 0%, rgba(160,232,220,1) 78%);
+}

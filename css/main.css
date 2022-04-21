@@ -1,625 +1,361 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Raleway', sans-serif;
-    
-}
-
-
-body{
-    background: rgb(255,247,247);
-    background: linear-gradient(90deg, rgba(255,247,247,1) 0%, rgba(160,232,220,1) 78%);
-}
-
-header{
-    z-index: 9999;
-    position: sticky;
-    top: 0%;
-    background-color: #fff;
-    border-bottom: 1px grey solid ;   
-}
-
-header nav ul li{
-    transition: 1s;
-}
-
-header nav ul li:hover{
-    transform: scale(1.1);
-    box-shadow: #6b0707 0.2rem 0.2rem;
-}
-
-.listaImg{
-    padding: 0.3rem;
-}
-
-.menu{
+@charset "UTF-8";
+header {
+  z-index: 9999;
+  position: sticky;
+  top: 0%;
+  background-color: #fff;
+  border-bottom: 1px grey solid; }
+  header nav ul li {
+    transition: 1s; }
+    header nav ul li:hover {
+      transform: scale(1.1);
+      box-shadow: #6b0707 0.2rem 0.2rem; }
+  header div ul li a {
+    background-color: lightgray;
+    text-decoration: none;
+    font-size: 1rem;
+    border: 2px #500808 solid; }
+  header div ul li .menu {
     display: flex;
-    list-style: none;
-    
-}
+    list-style: none; }
 
-.botones{
-    margin-right: 2rem;
-}
+body {
+  background: #fff7f7;
+  background: linear-gradient(90deg, #fff7f7 0%, #a0e8dc 78%); }
 
-.menuLista{
-    background-color: rgb(211, 211, 211);
-    text-decoration: none;
-    font-size: 0.52rem;
-    border: 2px #500808 solid;
-    
-}
-
-
-
-.item{
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-}
-
-.contenedor{
-    display: grid;
-    grid-template-areas: "imagen "
-                         "titulo "
-                         "parrafo "
-                         "footer ";
-    justify-content: center;
-}
-
-
-.fotoIndex{
+/*estilos Index */
+.contenedor {
+  display: grid;
+  grid-template-areas: "imagen " "contenido" "footer ";
+  justify-content: center; }
+  .contenedor .contenedorMain .fotoIndex {
     grid-area: imagen;
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-
-.tituloIndex{
-    grid-area: titulo;
-    font-size: 1rem;
-    text-align: center;
-    color: #383970;
-    padding: 1rem;
-}
-
-.parrafoIndex{
-    grid-area: parrafo;
-    font-size: 1rem;
-    text-align: center;
-    padding: 5rem;
-    color: #eb6533;
-}
-
- footer{
-     grid-area: footer;
-     
- }
-
- .redesSociales{
-    display: flex;
-    display: inline-block;
-    flex-direction: column;
-}
-
-.linksRedes{
-    text-decoration: none;
-}
-
-.redesSociales a img{
-    width: 17%;
-}
-
-
-/*acá termina el Css del index y arranca el de "trabajos"*/
-
-
-.contenedorTrabajos{
+    align-items: center; }
+  .contenedor .contenedorMain .slogan1 {
+    grid-area: contenido;
     display: grid;
-    grid-template-areas: "titulo"
-                         "subtitulo1"
-                         "foto1"
-                         "parrafo1"
-                         "subtitulo2"
-                         "foto2"
-                         "parrafo2";
-}
-
-.titulosHtml{
-    grid-area: titulo;
-    color: #eb6533;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Roboto', sans-serif;  
-    font-size: 2rem;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.imgPag1{
-   grid-area: foto1;
-   margin-top: 2.2rem;
-   margin-bottom: 2.2rem;
-   width: 15rem;
-   display: flex;
-   justify-self: center;
-   width: 15rem;
-   display: flex;
-   justify-self: center;
-   border-radius: 10%;
-}
-
-.linkPag1{
-    text-decoration: none;
-    color: #17A589;
-}
-
-
-.tituloPrimerProyect {
-   text-align: center;
-   grid-area: subtitulo1;
-}
-
-.parrafoPrimerProyect {
-    grid-area: parrafo1;
-    text-align: center;
-    padding: 2.5rem;
-}
-
-.imgPag2 {
-     grid-area: foto2;
-     margin-top: 2.2rem;
-     margin-bottom: 2.2rem;
-     width: 15rem;
-     display: flex;
-     justify-self: center;
-     border-radius: 10%;
-}
-
-.linkPag2{
-    text-decoration: none;
-    color: #17A589;
-}
-
-.tituloSegundoProyect {
-    grid-area: subtitulo2;
-    text-align: center;
-}
-
-.parrafoSegundoProyect {
-    grid-area: parrafo2;
-    text-align: center;
-    padding: 2.5rem;
-}
-
-
-/*acá termina el Css del Trabajos y arranca el de "Conocimientos" */
-
-.programadorConocimientos{
-    display:none;
-}
-/*
-.contConocimientos{
-    display: grid;
-    grid-template-areas:"titulo titulo"
-                        "conHtml conHtml"
-                        "conCss conCss"
-                        "subtit subtit";
-}
-*/
-.titulosHtml{
-    grid-area: titulo;
-    margin-bottom: 3rem;
-}
-
-.html-carrousel{
-    height: 30vh;
-}
-
-.css-carrousel{
-    height: 30vh;
-}
-
-.git-carrousel{
-    height: 20vh;
-}
-
-.bootstap-carrousel{
-    height: 30vh;
-}
-
-.conocimientosHtml{
-    grid-area: conHtml;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 3rem;
-}
-
-
-
-
-
-.textoConocimiento{
-    text-align: center;
-    color: blue;
-}
-
-.contenidoConocimiento{
-    grid-area: subtit;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    padding: 5rem;
-}
-
-.footerConocimientos{
-    margin-top: 16.5rem;
-}
-
-
-
-/*acá termina el Css de conocimientos y arranca el de Sobre mi */
-
-.contenedorSobreMi{
-    display: grid;
-    grid-template-areas: "foto foto"
-                         "titulo titulo"
-                         "parrafo parrafo";
-    
-}
-
-.tituloSobreMi{
-    grid-area: titulo;
-    color: #eb6533;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Roboto', sans-serif;  
-    font-size: 2.3rem;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.fotoYo{
-    text-align: center;
-    grid-area: foto;
-}
-
-.fotoYo img{
-    width: 50%;
-}
-
-.subTituloSobreMi{
-    grid-area: titulo;
-    font-size: 1.5rem;
-    text-align: center;
-    color: #383970;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.contenidoSobreMi{
-    padding: 1.7rem;
-    grid-area: parrafo;
-    text-align: center;
-    color: #17A589;
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-}
-/*acá termina el Css de Sobre mi y arranca el de Contacto */
-
-
-.redes-sociales a{
-    text-decoration: none;
-    margin-bottom: 3rem;
-}
-
-.redes-sociales a{
-    width: 50%;
-}
-
-.redes-sociales a img{
-    width: 55%;
-}
-
-.formulario{
-    margin-top: 2rem;
-    margin-left: 16%;
-    height: 90%;
-    width: 70%;
-    border: 2px solid #17A589;
-    text-align: center;
-}
-
-#consultaFormulario{
-    width: 90%;
-}
-
-
-/* empiezan las mediaqueries*/
-
-
-
-
-@media only screen and (min-width:650px){
-
-    .menuLista{
-        font-size: 1rem;
-    }
-
-    .contenedorMain{
-        display: grid;
-        grid-template-areas: "imagen titulo"
-                             "imagen parrafo ";
-                             
-        justify-content: center;
-        grid-template-columns: 40% 60%;
-        column-gap: 2rem;
-    }
-
-    .fotoIndex{
+    grid-template-areas: "titulo" "parrafo"; }
+    .contenedor .contenedorMain .slogan1 .tituloIndex {
+      grid-area: titulo;
+      font-size: 1rem;
+      text-align: center;
+      color: #eb6533;
+      padding: 1rem; }
+    .contenedor .contenedorMain .slogan1 .parrafoIndex {
+      grid-area: parrafo;
+      font-size: 1rem;
+      text-align: center;
+      padding: 5rem;
+      color: #17A589; }
+  .contenedor footer {
+    grid-area: footer; }
+    .contenedor footer .redesSociales {
+      display: flex;
+      display: inline-block;
+      flex-direction: column; }
+      .contenedor footer .redesSociales .linksRedes {
+        text-decoration: none; }
+        .contenedor footer .redesSociales .linksRedes img {
+          width: 17%; }
+  @media only screen and (min-width: 650px) {
+    .contenedor .contenedorMain {
+      display: grid;
+      grid-template-areas: "imagen contenido" "imagen contenido ";
+      justify-content: center;
+      grid-template-columns: 40% 60%;
+      column-gap: 2rem; }
+      .contenedor .contenedorMain .fotoIndex {
         display: flex;
-        width: 150%;
-        
-    }
-
-    .tituloIndex{
+        width: 150%; }
+      .contenedor .contenedorMain .slogan1 .tituloIndex {
         margin-top: 17vh;
         font-size: 1.5rem;
         text-align: center;
-        color: #383970;
-    }
-    
-    .parrafoIndex{
+        color: #eb6533; }
+      .contenedor .contenedorMain .slogan1 .parrafoIndex {
         font-weight: bold;
         font-size: 0.7rem;
-        text-align:center;
-        color: #eb6533;
-    }
-
-    .redesSociales{
-        margin-top: 33rem;
-    }
-
-    .redesSociales a img{
-        width: 60%;
-    }
-    
-    
-    
-    
-}
-
-@media only screen and (min-width:1024px){
-
-    .contenedorMain{
-        display: grid;
-        grid-template-areas: "imagen titulo"
-                             "imagen parrafo ";
-        column-gap: 0rem;
-
-    }
-
-
-
-    .fotoIndex{
+        text-align: center;
+        color: #17A589; }
+    .contenedor .redesSociales {
+      margin-top: 33rem; }
+    .contenedor .redesSociales a img {
+      width: 60%; } }
+  @media only screen and (min-width: 1024px) {
+    .contenedor .contenedorMain {
+      display: grid;
+      grid-template-areas: "imagen contenido" "imagen contenido ";
+      justify-content: center;
+      grid-template-columns: 40% 60%;
+      column-gap: 2rem; }
+      .contenedor .contenedorMain .fotoIndex {
         display: flex;
-        width: 39rem;
-    }
-
-    .tituloIndex{
+        width: 39rem; }
+      .contenedor .contenedorMain .slogan1 .tituloIndex {
         font-size: 2rem;
-        padding: 3rem;
-    }
+        padding: 3rem; }
+      .contenedor .contenedorMain .slogan1 .parrafoIndex {
+        font-size: 1.2rem; }
+    .contenedor .redesSociales a img {
+      width: 70%; } }
 
-    .parrafoIndex{
-        font-size: 1.2rem;
-    }
+/*acá termina el Css del index y arranca el de "trabajos"*/
+@media only screen and (max-width: 650px) {
+  .contenedorTrabajos {
+    display: grid;
+    grid-template-areas: "titulo" "subtitulo1" "foto1" "parrafo1" "subtitulo2" "foto2" "parrafo2"; }
+    .contenedorTrabajos .titulosHtml {
+      grid-area: titulo;
+      color: #eb6533;
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+      font-family: 'Roboto', sans-serif;
+      font-size: 2rem;
+      margin-top: 30px;
+      margin-bottom: 30px; }
+    .contenedorTrabajos .imgPag1 {
+      grid-area: foto1;
+      margin-top: 2.2rem;
+      margin-bottom: 2.2rem;
+      width: 15rem;
+      display: flex;
+      justify-self: center;
+      border-radius: 10%; }
+    .contenedorTrabajos .tituloPrimerProyect {
+      text-align: center;
+      grid-area: subtitulo1;
+      color: #eb6533; }
+    .contenedorTrabajos .parrafoPrimerProyect {
+      grid-area: parrafo1;
+      text-align: center;
+      padding: 2.5rem;
+      color: #17A589; }
+    .contenedorTrabajos .imgPag2 {
+      grid-area: foto2;
+      margin-top: 2.2rem;
+      margin-bottom: 2.2rem;
+      width: 15rem;
+      display: flex;
+      justify-self: center;
+      border-radius: 10%; }
+    .contenedorTrabajos .tituloSegundoProyect {
+      grid-area: subtitulo2;
+      text-align: center;
+      color: #eb6533; }
+    .contenedorTrabajos .parrafoSegundoProyect {
+      grid-area: parrafo2;
+      text-align: center;
+      padding: 2.5rem;
+      color: #17A589; }
+    .contenedorTrabajos .linkPag1 {
+      text-decoration: none;
+      color: #383970; }
+    .contenedorTrabajos .linkPag2 {
+      text-decoration: none;
+      color: #383970; } }
 
-    .redesSociales a img{
-        width: 70%;
-    }
-}
+@media only screen and (min-width: 650px) {
+  .contenedorTrabajos {
+    display: grid;
+    grid-template-areas: "titulo titulo" "foto1 subtitulo1" "foto1 parrafo1" "subtitulo2 foto2" "parrafo2 foto2"; }
+    .contenedorTrabajos .titulosHtml {
+      grid-area: titulo;
+      color: #eb6533;
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+      font-family: 'Roboto', sans-serif;
+      font-size: 2rem;
+      margin-top: 30px;
+      margin-bottom: 30px; }
+    .contenedorTrabajos .imgPag1 {
+      grid-area: foto1;
+      margin-top: 2.2rem;
+      margin-bottom: 2.2rem;
+      width: 17rem;
+      display: flex;
+      justify-self: center;
+      border-radius: 10%; }
+    .contenedorTrabajos .tituloPrimerProyect {
+      text-align: center;
+      grid-area: subtitulo1;
+      color: #eb6533; }
+    .contenedorTrabajos .parrafoPrimerProyect {
+      grid-area: parrafo1;
+      text-align: center;
+      padding: 2.5rem;
+      color: #17A589; }
+    .contenedorTrabajos .imgPag2 {
+      grid-area: foto2;
+      margin-top: 2.2rem;
+      margin-bottom: 2.2rem;
+      width: 17rem;
+      display: flex;
+      justify-self: center;
+      border-radius: 10%; }
+    .contenedorTrabajos .tituloSegundoProyect {
+      grid-area: subtitulo2;
+      text-align: center;
+      color: #eb6533; }
+    .contenedorTrabajos .parrafoSegundoProyect {
+      grid-area: parrafo2;
+      text-align: center;
+      padding: 2.5rem;
+      color: #17A589; }
+    .contenedorTrabajos .linkPag1 {
+      text-decoration: none;
+      color: #383970; }
+    .contenedorTrabajos .linkPag2 {
+      text-decoration: none;
+      color: #383970; } }
 
-/* fin de la mediaqueri del index e inicio del trabajos*/
+@media only screen and (min-width: 1024px) {
+  .contenedorSobreMi {
+    grid-template-areas: "titulo foto" "parrafo foto";
+    grid-template-columns: 1fr 1fr; }
+    .contenedorSobreMi .fotoYo {
+      align-self: center; }
+    .contenedorSobreMi .fotoYo img {
+      width: 80%; }
+    .contenedorSobreMi .subTituloSobreMi {
+      font-size: 1.8rem; }
+    .contenedorSobreMi .contenidoSobreMi {
+      font-size: 1.1rem; } }
 
+/*acá termina el Css del Trabajos y arranca el de "Conocimientos" */
+.titulosHtml {
+  grid-area: titulo;
+  color: #eb6533;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  margin-top: 30px;
+  margin-bottom: 30px; }
 
-@media only screen and (min-width:650px){
+.contConocimientos .carousel .carousel-inner .carousel-item .html-carrousel {
+  height: 30vh; }
 
-    .contenedorTrabajos{
-        display: grid;
-        grid-template-areas: "titulo titulo"
-                             "foto1 subtitulo1"
-                             "foto1 parrafo1"
-                             "subtitulo2 foto2"
-                             "parrafo2 foto2";
-    }
+.contConocimientos .carousel .carousel-inner .carousel-item .css-carrousel {
+  height: 30vh; }
 
-    .imgPag1{
-        width: 18rem;
-    }
+.contConocimientos .carousel .carousel-inner .carousel-item .git-carrousel {
+  height: 20vh; }
 
-    .imgPag2{
-        width: 18rem;
-    }
+.contConocimientos .carousel .carousel-inner .carousel-item .bootstap-carrousel {
+  height: 30vh; }
 
-    .redesSociales{
-        display: flex;
-        flex-direction: row;
+.contConocimientos .contenidoConocimiento {
+  grid-area: subtit;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  padding: 5rem; }
+  .contConocimientos .contenidoConocimiento .textoConocimiento {
+    text-align: center;
+    color: #17A589; }
 
-    }
-    footer{
-        margin-top: 0%;
-    }
+.footerConocimientos {
+  margin-top: 16.5rem; }
+  .footerConocimientos .linksRedes {
+    text-decoration: none; }
 
-    @media only screen and (min-width:1024px){
+/*acá termina el Css de conocimientos y arranca el de Sobre mi */
+.tituloSobreMi {
+  color: #eb6533;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  margin-top: 30px;
+  margin-bottom: 30px; }
 
-        .tituloPrimerProyect{
-            font-size: 2rem;
-            
-        }
+@media only screen and (max-width: 650px) {
+  .contenedorSobreMi {
+    display: grid;
+    grid-template-areas: "foto foto" "titulo titulo" "parrafo parrafo"; }
+    .contenedorSobreMi .fotoYo {
+      text-align: center;
+      grid-area: foto; }
+      .contenedorSobreMi .fotoYo img {
+        height: 90%; }
+    .contenedorSobreMi .subTituloSobreMi {
+      grid-area: titulo;
+      font-size: 1.5rem;
+      text-align: center;
+      color: #383970;
+      margin-top: 1rem;
+      margin-bottom: 1rem; }
+    .contenedorSobreMi .contenidoSobreMi {
+      padding: 1.7rem;
+      grid-area: parrafo;
+      text-align: center;
+      color: #17A589;
+      font-size: 1rem;
+      margin-bottom: 1.5rem; } }
 
-        .tituloSegundoProyect{
-            margin-top: 3rem;
-            font-size: 2rem;
-        }
+@media only screen and (min-width: 650px) {
+  .contenedorSobreMi {
+    display: grid;
+    grid-template-areas: "foto foto" "titulo titulo" "parrafo parrafo"; }
+    .contenedorSobreMi .fotoYo {
+      text-align: center;
+      grid-area: foto; }
+      .contenedorSobreMi .fotoYo img {
+        height: 90%; }
+    .contenedorSobreMi .subTituloSobreMi {
+      grid-area: titulo;
+      font-size: 1.5rem;
+      text-align: center;
+      color: #383970;
+      margin-top: 1rem;
+      margin-bottom: 1rem; }
+    .contenedorSobreMi .contenidoSobreMi {
+      padding-left: 8rem;
+      padding-right: 8rem;
+      grid-area: parrafo;
+      text-align: center;
+      color: #17A589;
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem; }
+    .contenedorSobreMi .tituloSobreMi {
+      font-size: 3rem; } }
 
-        .imgPag1{
-            width: 25rem;
-        }
+@media only screen and (min-width: 1024px) {
+  .contenedorSobreMi {
+    grid-template-areas: "titulo foto" "parrafo foto";
+    grid-template-columns: 1fr 1fr; }
+    .contenedorSobreMi .fotoYo {
+      align-self: center; }
+    .contenedorSobreMi .fotoYo img {
+      width: 80%; }
+    .contenedorSobreMi .subTituloSobreMi {
+      font-size: 1.8rem; }
+    .contenedorSobreMi .contenidoSobreMi {
+      font-size: 1.1rem; } }
 
-        .imgPag2{
-            width: 25rem;
-        }
-    }
+/*acá termina el Css de Sobre mi y arranca el de Contacto */
+.redes-sociales a {
+  text-decoration: none;
+  margin-bottom: 3rem;
+  width: 50%; }
+  .redes-sociales a .redes-sociales a img {
+    width: 55%; }
 
-}
+.formulario {
+  margin-top: 2rem;
+  margin-left: 16%;
+  height: 90%;
+  width: 70%;
+  border: 2px solid #17A589;
+  text-align: center; }
+  .formulario #consultaFormulario {
+    width: 90%; }
 
-/* fin de la mediaqueries trabajos e inicio de conocimientos*/
+@media only screen and (min-width: 768px) {
+  .redes-sociales a img {
+    width: 45%; } }
 
-@media only screen and (min-width:650px){
-
-    .contConocimientos{
-        grid-template-areas:"titulo titulo"
-                            "conHtml conHtml"
-                            "program program"
-                            "conCss conCss"
-                            "subtit subtit";
-    }
-
-    .programadorConocimientos{
-        margin-left: 40%;
-        grid-area: program;
-        display: block;
-    }
-
-    .programadorConocimientos img{
-        justify-self: center;
-        width: 35%;
-    }
-
-    .conocimientosHtml{
-        margin-top: 5rem;
-
-    }
-    .contenidoConocimiento{
-        margin-top: 2rem;
-        padding: 9rem;
-    }
-}
-
-@media only screen and (min-width:1024px){
-
-    .contConocimientos{
-        grid-template-areas:"titulo titulo"
-                            "conHtml conHtml"
-                            "program subtit"
-                            "conCss conCss";
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 5% 15% 40% 20%;
-        
-    }
-
-    .conocimientosHtml{
-        height: 7rem;
-        
-    }
-
-    .imagenHtml{
-        width: 8%;
-    }
-
-    .barraHtml{
-        height: 3rem;
-        width: 20%;
-    }
-
-    .programadorConocimientos{
-        align-self: flex-end;
-        padding-bottom: 4.3rem;
-    }
-
-    .programadorConocimientos img{
-        width: 15rem;
-    }
-
-    .conocimientosCss{
-        height: 10rem;
-    }
-
-    .imagenCss{
-        height: 7rem;
-        width: 7rem;
-    }
-
-    .barraCss{
-        width: 20%;
-        height: 35%;
-    }
-}
-/* fin de la mediaqueries conociminetos e inicio de sobre mi*/
-
-@media only screen and (min-width:650px){
-
-        .tituloSobreMi{
-            font-size: 3rem;
-        }
-
-
-        .contenidoSobreMi{
-            padding-left: 8rem;
-            padding-right: 8rem;
-            font-size: 1.2rem;
-        }
-
-        .subTituloSobreMi{
-            font-size: 1.6rem;
-        }
-
-        
-}
-
-@media only screen and (min-width:1024px){
-
-    .contenedorSobreMi{
-        grid-template-areas: "titulo foto"
-                             "parrafo foto";
-        grid-template-columns: 1fr 1fr;
-        
-    }
-
-    .fotoYo{
-        align-self: center;
-    }
-
-    .fotoYo img{
-        width: 80%;
-    }
-
-    .subTituloSobreMi{
-        font-size: 1.8rem;
-    }
-
-    .contenidoSobreMi{
-        font-size: 1.1rem;
-    }
-
-}
-/* fin de la mediaqueries sobre mi e inicio de contactame*/
-
-
-@media only screen and (min-width:768px){
-
-    .redes-sociales a img{
-        width: 45%;
-    }
-}
-
-@media only screen and (min-width:1200px){
-
-    .redes-sociales a img{
-        width: 30%;
-    }
-}
-
+@media only screen and (min-width: 1200px) {
+  .redes-sociales a img {
+    width: 30%; } }
