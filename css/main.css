@@ -3,25 +3,63 @@ header {
   z-index: 9999;
   position: sticky;
   top: 0%;
-  background-color: #fff;
-  border-bottom: 1px grey solid; }
-  header nav ul li {
-    transition: 1s; }
-    header nav ul li:hover {
-      transform: scale(1.1);
-      box-shadow: #6b0707 0.2rem 0.2rem; }
+  border-bottom: 1px grey solid;
+  height: 100%; }
+  header nav ul .menuLista {
+    transition: 0.8s; }
+    header nav ul .menuLista:hover {
+      border-bottom: 1px solid #500808;
+      color: #500808; }
   header div ul li a {
-    background-color: lightgray;
-    text-decoration: none;
-    font-size: 1rem;
-    border: 2px #500808 solid; }
+    font-size: 1.2rem; }
+  header div ul li .info {
+    margin-right: 3rem; }
   header div ul li .menu {
     display: flex;
     list-style: none; }
+  header div ul li ul li .dropdown-item:active {
+    background-color: white; }
+  header div a img {
+    margin-left: 3rem; }
 
 body {
-  background: #fff7f7;
-  background: linear-gradient(90deg, #fff7f7 0%, #a0e8dc 78%); }
+  background: #070b0e;
+  background: linear-gradient(143deg, #070b0e 0%, #4d0c0c 51%, #ab0d0d 100%); }
+
+footer {
+  background-color: #070B0E;
+  text-align: center; }
+  footer .redesSociales {
+    width: 100%;
+    padding: 0%; }
+    footer .redesSociales .redesCont {
+      text-align: center;
+      display: flex;
+      display: inline-block;
+      width: 20%;
+      height: 20%; }
+      footer .redesSociales .redesCont:hover {
+        border-radius: 50%;
+        transform: scale(1.1); }
+    footer .redesSociales .fb:hover {
+      filter: drop-shadow(6px 6px 10px blue); }
+    footer .redesSociales .ig:hover {
+      filter: drop-shadow(6px 6px 10px #e67487); }
+    footer .redesSociales .in:hover {
+      filter: drop-shadow(6px 6px 10px #6161ff); }
+    footer .redesSociales .wpp:hover {
+      filter: drop-shadow(6px 6px 10px #0bf00b); }
+  footer .parrafoFooter {
+    display: block; }
+    footer .parrafoFooter .derechosReservados {
+      color: #C4C4C4; }
+
+.contenedorTrabajos .imgPag1, .contenedorTrabajos .imgPag2 {
+  margin-top: 2.2rem;
+  margin-bottom: 2.2rem;
+  width: 15rem;
+  display: flex;
+  justify-self: center; }
 
 /*estilos Index */
 .contenedor {
@@ -39,26 +77,24 @@ body {
     grid-template-areas: "titulo" "parrafo"; }
     .contenedor .contenedorMain .slogan1 .tituloIndex {
       grid-area: titulo;
-      font-size: 1rem;
+      color: #FFFFFF;
+      font-weight: bold;
       text-align: center;
-      color: #eb6533;
-      padding: 1rem; }
+      font-family: 'Open Sans', sans-serif;
+      font-family: 'Roboto', sans-serif;
+      font-size: 2rem;
+      margin-top: 30px;
+      margin-bottom: 30px; }
     .contenedor .contenedorMain .slogan1 .parrafoIndex {
       grid-area: parrafo;
       font-size: 1rem;
       text-align: center;
       padding: 5rem;
-      color: #17A589; }
-  .contenedor footer {
+      color: #1B3989; }
+    .contenedor .contenedorMain .slogan1 .TituloFoto img {
+      display: none; }
+  .contenedor .contenedorMain footer {
     grid-area: footer; }
-    .contenedor footer .redesSociales {
-      display: flex;
-      display: inline-block;
-      flex-direction: column; }
-      .contenedor footer .redesSociales .linksRedes {
-        text-decoration: none; }
-        .contenedor footer .redesSociales .linksRedes img {
-          width: 17%; }
   @media only screen and (min-width: 650px) {
     .contenedor .contenedorMain {
       display: grid;
@@ -68,93 +104,100 @@ body {
       column-gap: 2rem; }
       .contenedor .contenedorMain .fotoIndex {
         display: flex;
-        width: 150%; }
-      .contenedor .contenedorMain .slogan1 .tituloIndex {
-        margin-top: 17vh;
-        font-size: 1.5rem;
-        text-align: center;
-        color: #eb6533; }
-      .contenedor .contenedorMain .slogan1 .parrafoIndex {
-        font-weight: bold;
-        font-size: 0.7rem;
-        text-align: center;
-        color: #17A589; }
-    .contenedor .redesSociales {
-      margin-top: 33rem; }
-    .contenedor .redesSociales a img {
-      width: 60%; } }
+        width: 150%;
+        margin-bottom: 33rem; }
+      .contenedor .contenedorMain .slogan1 {
+        grid-template-areas: "tituloFoto" "titulo" "parrafo";
+        column-gap: 1rem; }
+        .contenedor .contenedorMain .slogan1 .TituloFoto {
+          margin-top: 7.5rem;
+          display: flex;
+          justify-content: center;
+          grid-area: tituloFoto; }
+          .contenedor .contenedorMain .slogan1 .TituloFoto img {
+            display: block; }
+        .contenedor .contenedorMain .slogan1 .tituloIndex {
+          grid-area: titulo;
+          color: #FFFFFF;
+          font-weight: bold;
+          text-align: center;
+          font-family: 'Open Sans', sans-serif;
+          font-family: 'Roboto', sans-serif;
+          font-size: 2rem;
+          margin-top: 30px;
+          margin-bottom: 30px; }
+        .contenedor .contenedorMain .slogan1 .parrafoIndex {
+          grid-area: parrafo;
+          font-weight: bold;
+          font-size: 1rem;
+          text-align: center;
+          color: #1B3989;
+          margin-bottom: 33rem; } }
+  .contenedor .redesSociales a img {
+    width: 30%; }
   @media only screen and (min-width: 1024px) {
     .contenedor .contenedorMain {
       display: grid;
       grid-template-areas: "imagen contenido" "imagen contenido ";
       justify-content: center;
       grid-template-columns: 40% 60%;
-      column-gap: 2rem; }
+      column-gap: 0rem; }
       .contenedor .contenedorMain .fotoIndex {
         display: flex;
-        width: 39rem; }
+        width: 100%; }
       .contenedor .contenedorMain .slogan1 .tituloIndex {
         font-size: 2rem;
-        padding: 3rem; }
+        padding: 2rem;
+        margin-top: 2rem; }
       .contenedor .contenedorMain .slogan1 .parrafoIndex {
         font-size: 1.2rem; }
     .contenedor .redesSociales a img {
-      width: 70%; } }
+      width: 25%; } }
 
 /*acá termina el Css del index y arranca el de "trabajos"*/
-@media only screen and (max-width: 650px) {
-  .contenedorTrabajos {
-    display: grid;
-    grid-template-areas: "titulo" "subtitulo1" "foto1" "parrafo1" "subtitulo2" "foto2" "parrafo2"; }
-    .contenedorTrabajos .titulosHtml {
-      grid-area: titulo;
-      color: #eb6533;
-      text-align: center;
-      font-family: 'Open Sans', sans-serif;
-      font-family: 'Roboto', sans-serif;
-      font-size: 2rem;
-      margin-top: 30px;
-      margin-bottom: 30px; }
-    .contenedorTrabajos .imgPag1 {
-      grid-area: foto1;
-      margin-top: 2.2rem;
-      margin-bottom: 2.2rem;
-      width: 15rem;
-      display: flex;
-      justify-self: center;
-      border-radius: 10%; }
-    .contenedorTrabajos .tituloPrimerProyect {
-      text-align: center;
-      grid-area: subtitulo1;
-      color: #eb6533; }
-    .contenedorTrabajos .parrafoPrimerProyect {
-      grid-area: parrafo1;
-      text-align: center;
-      padding: 2.5rem;
-      color: #17A589; }
-    .contenedorTrabajos .imgPag2 {
-      grid-area: foto2;
-      margin-top: 2.2rem;
-      margin-bottom: 2.2rem;
-      width: 15rem;
-      display: flex;
-      justify-self: center;
-      border-radius: 10%; }
-    .contenedorTrabajos .tituloSegundoProyect {
-      grid-area: subtitulo2;
-      text-align: center;
-      color: #eb6533; }
-    .contenedorTrabajos .parrafoSegundoProyect {
-      grid-area: parrafo2;
-      text-align: center;
-      padding: 2.5rem;
-      color: #17A589; }
-    .contenedorTrabajos .linkPag1 {
-      text-decoration: none;
-      color: #383970; }
-    .contenedorTrabajos .linkPag2 {
-      text-decoration: none;
-      color: #383970; } }
+.contenedorTrabajos {
+  display: grid;
+  grid-template-areas: "titulo" "subtitulo1" "foto1" "parrafo1" "subtitulo2" "foto2" "parrafo2"; }
+  .contenedorTrabajos .titulosHtml {
+    grid-area: titulo;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    margin-top: 30px;
+    margin-bottom: 30px; }
+  .contenedorTrabajos .imgPag1 {
+    grid-area: foto1;
+    width: 100%; }
+  .contenedorTrabajos .tituloPrimerProyect {
+    text-align: center;
+    grid-area: subtitulo1;
+    color: #FFFFFF; }
+  .contenedorTrabajos .parrafoPrimerProyect {
+    grid-area: parrafo1;
+    text-align: center;
+    padding: 2.5rem;
+    color: #1B3989; }
+  .contenedorTrabajos .imgPag2 {
+    grid-area: foto2;
+    width: 100%; }
+  .contenedorTrabajos .tituloSegundoProyect {
+    grid-area: subtitulo2;
+    text-align: center;
+    color: #FFFFFF; }
+  .contenedorTrabajos .parrafoSegundoProyect {
+    grid-area: parrafo2;
+    text-align: center;
+    padding: 2.5rem;
+    color: #1B3989; }
+  .contenedorTrabajos .linkPag1 {
+    text-decoration: none;
+    color: #070B0E; }
+  .contenedorTrabajos .linkPag2 {
+    text-decoration: none;
+    color: #070B0E; }
 
 @media only screen and (min-width: 650px) {
   .contenedorTrabajos {
@@ -162,7 +205,8 @@ body {
     grid-template-areas: "titulo titulo" "foto1 subtitulo1" "foto1 parrafo1" "subtitulo2 foto2" "parrafo2 foto2"; }
     .contenedorTrabajos .titulosHtml {
       grid-area: titulo;
-      color: #eb6533;
+      color: #FFFFFF;
+      font-weight: bold;
       text-align: center;
       font-family: 'Open Sans', sans-serif;
       font-family: 'Roboto', sans-serif;
@@ -180,12 +224,12 @@ body {
     .contenedorTrabajos .tituloPrimerProyect {
       text-align: center;
       grid-area: subtitulo1;
-      color: #eb6533; }
+      color: #FFFFFF; }
     .contenedorTrabajos .parrafoPrimerProyect {
       grid-area: parrafo1;
       text-align: center;
       padding: 2.5rem;
-      color: #17A589; }
+      color: #1B3989; }
     .contenedorTrabajos .imgPag2 {
       grid-area: foto2;
       margin-top: 2.2rem;
@@ -197,19 +241,26 @@ body {
     .contenedorTrabajos .tituloSegundoProyect {
       grid-area: subtitulo2;
       text-align: center;
-      color: #eb6533; }
+      color: #FFFFFF; }
     .contenedorTrabajos .parrafoSegundoProyect {
       grid-area: parrafo2;
       text-align: center;
       padding: 2.5rem;
-      color: #17A589; }
+      color: #1B3989; }
     .contenedorTrabajos .linkPag1 {
       text-decoration: none;
-      color: #383970; }
+      color: #070B0E; }
     .contenedorTrabajos .linkPag2 {
       text-decoration: none;
-      color: #383970; } }
+      color: #070B0E; } }
 
+@media only screen and (min-width: 1024px) {
+  .contenedorTrabajos .imgPag1 {
+    width: 22rem; }
+  .contenedorTrabajos .imgPag2 {
+    width: 22rem; } }
+
+/* aca termina el css de conocimiento y empieza el de sobre mi*/
 @media only screen and (min-width: 1024px) {
   .contenedorSobreMi {
     grid-template-areas: "titulo foto" "parrafo foto";
@@ -226,7 +277,8 @@ body {
 /*acá termina el Css del Trabajos y arranca el de "Conocimientos" */
 .titulosHtml {
   grid-area: titulo;
-  color: #eb6533;
+  color: #FFFFFF;
+  font-weight: bold;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Roboto', sans-serif;
@@ -241,7 +293,7 @@ body {
   height: 30vh; }
 
 .contConocimientos .carousel .carousel-inner .carousel-item .git-carrousel {
-  height: 20vh; }
+  height: 30vh; }
 
 .contConocimientos .carousel .carousel-inner .carousel-item .bootstap-carrousel {
   height: 30vh; }
@@ -253,7 +305,7 @@ body {
   padding: 5rem; }
   .contConocimientos .contenidoConocimiento .textoConocimiento {
     text-align: center;
-    color: #17A589; }
+    color: #1B3989; }
 
 .footerConocimientos {
   margin-top: 16.5rem; }
@@ -262,7 +314,9 @@ body {
 
 /*acá termina el Css de conocimientos y arranca el de Sobre mi */
 .tituloSobreMi {
-  color: #eb6533;
+  color: #FFFFFF;
+  color: #FFFFFF;
+  font-weight: bold;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Roboto', sans-serif;
@@ -283,14 +337,14 @@ body {
       grid-area: titulo;
       font-size: 1.5rem;
       text-align: center;
-      color: #383970;
+      color: #070B0E;
       margin-top: 1rem;
       margin-bottom: 1rem; }
     .contenedorSobreMi .contenidoSobreMi {
       padding: 1.7rem;
       grid-area: parrafo;
       text-align: center;
-      color: #17A589;
+      color: #1B3989;
       font-size: 1rem;
       margin-bottom: 1.5rem; } }
 
@@ -307,7 +361,7 @@ body {
       grid-area: titulo;
       font-size: 1.5rem;
       text-align: center;
-      color: #383970;
+      color: #070B0E;
       margin-top: 1rem;
       margin-bottom: 1rem; }
     .contenedorSobreMi .contenidoSobreMi {
@@ -315,7 +369,7 @@ body {
       padding-right: 8rem;
       grid-area: parrafo;
       text-align: center;
-      color: #17A589;
+      color: #1B3989;
       font-size: 1.2rem;
       margin-bottom: 1.5rem; }
     .contenedorSobreMi .tituloSobreMi {

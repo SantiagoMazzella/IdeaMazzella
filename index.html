@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Mazzella</title>
+    <meta name="description" content="Portafolio o pagina web de Santiago Mazzella, desarrollador web frontend">
+    <meta name="keyword" content="desarrollador,web,programador,html,css,pagina,sitio,portafolio,frontend">
+
+    <title>Home-Mazzella</title>
 
     <!-- link de animate.css -->
     <link
@@ -30,7 +33,7 @@
     
     <!-- Acá esta la barra superior de la pagina con las listas -->
     <header class="barra-superior">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light r">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid ">
               <a class="navbar-brand" href="index.html">
                   <img src="img/Logo.png" alt=" logo Home" class="imagenBarra">
@@ -48,14 +51,14 @@
                   <a class="nav-link menuLista" href="Pages/Trabajos.html">Trabajos</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle menuLista" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle info" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Informacion
                   </a>
-                  <ul class="dropdown-menu menuLista" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="Pages/Conocimientos.html">Conocimientos</a></li>
-                    <li><a class="dropdown-item" href="Pages/Contactame.html">Contactame</a></li>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item menuLista" href="Pages/Conocimientos.html">Conocimientos</a></li>
+                    <li><a class="dropdown-item menuLista" href="Pages/Contactame.html">Contactame</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="Pages/SobreMi.html">Sobre mí</a></li>
+                    <li><a class="dropdown-item menuLista" href="Pages/SobreMi.html">Sobre mí</a></li>
                   </ul>
                 </li>
               </ul>
@@ -70,6 +73,9 @@
             </div>
             
             <div class="slogan1">
+                <div class="TituloFoto">
+                  <img src="img/titulo-foto.png" alt="titulo Index img">
+                </div>
                 <h1 class="tituloIndex">
                     Más que un desarrollador de páginas, <br> un desarrollador de sueños
                 </h1>
@@ -82,21 +88,31 @@
         <!-- derechos reservados-->
         <footer>
           <section class="redesSociales">
-             <a href="https://www.facebook.com/santiago.mazzella.9/" target="_blank" class="linksRedes">
-                  <img src="img/Facebook.png" width="50" alt="logo Facebook" >
-              </a>
-              <a href="https://www.instagram.com/mazzellasantiago/?hl=es-la" target="_blank" class="linksRedes">
-                  <img src="img/Instagram.png" width="50" alt="logo de Instagram" >
-              </a> 
-              <a href="https://wa.me/1158189155" target="_blank" class="linksRedes">
-                  <img src="img/Whatsapp.png" width="50" alt="logo de Whatsapp" >
-              </a>
-              <a href="https://www.linkedin.com/in/santiago-mazzella-237268234/" target="_blank" class="linksRedes">
-                  <img src="img/Linkedin.png" width="50" alt="logo de Linkedin" >
-              </a> 
+             <div class="redesCont fb">
+               <a href="https://www.facebook.com/santiago.mazzella.9/" target="_blank" class="linksRedes">
+                    <img src="img/Facebook.png" width="90%" alt="logo Facebook">
+                </a>
+             </div>
+              <div class="redesCont ig">
+                <a href="https://www.instagram.com/mazzellasantiago/?hl=es-la" target="_blank" class="linksRedes">
+                    <img src="img/Instagram.png" width="90%" alt="logo de Instagram">
+                </a> 
+              </div>
+              <div class="redesCont wpp">
+                <a href="https://wa.me/1158189155" target="_blank" class="linksRedes">
+                    <img src="img/Whatsapp.png" width="90%" alt="logo de Whatsapp">
+                </a>
+              </div>
+              <div class="redesCont in">
+                <a href="https://www.linkedin.com/in/santiago-mazzella-237268234/" target="_blank" class="linksRedes">
+                    <img src="img/Linkedin.png" width="90%" alt="logo de Linkedin">
+                </a> 
+              </div>
           </section>
           
-              <p class="derechosReservados"> Santiago Mazzella (mazzellasantiago@gmail.com)</p>
+              <div class="parrafoFooter">
+                <p class="derechosReservados"> Santiago Mazzella (mazzellasantiago@gmail.com)</p>
+              </div>
           </footer>
     </div>  
 

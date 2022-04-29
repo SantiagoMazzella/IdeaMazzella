@@ -1,0 +1,10 @@
+@mixin titulos {
+        color: $color-titulos;
+        font-weight: bold;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;  
+        font-size: 2rem;
+        margin-top: 30px;
+        margin-bottom: 30px;
+}
