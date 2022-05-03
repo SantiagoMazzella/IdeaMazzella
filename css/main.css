@@ -3,11 +3,11 @@ header {
   z-index: 9999;
   position: sticky;
   top: 0%;
-  border-bottom: 1px grey solid;
-  height: 100%; }
+  border-bottom: 1px grey solid; }
   header nav ul .menuLista {
-    transition: 0.8s; }
+    transition: 1.5s; }
     header nav ul .menuLista:hover {
+      transform: translateY(3px);
       border-bottom: 1px solid #500808;
       color: #500808; }
   header div ul li a {
@@ -24,35 +24,35 @@ header {
 
 body {
   background: #070b0e;
-  background: linear-gradient(143deg, #070b0e 0%, #4d0c0c 51%, #ab0d0d 100%); }
+  background: linear-gradient(143deg, #070b0e 0%, #4d0c0c 51%, #ab0d0d 100%);
+  position: relative;
+  padding-bottom: 3rem; }
 
 footer {
   background-color: #070B0E;
-  text-align: center; }
-  footer .redesSociales {
-    width: 100%;
-    padding: 0%; }
-    footer .redesSociales .redesCont {
-      text-align: center;
-      display: flex;
-      display: inline-block;
-      width: 20%;
-      height: 20%; }
-      footer .redesSociales .redesCont:hover {
-        border-radius: 50%;
-        transform: scale(1.1); }
-    footer .redesSociales .fb:hover {
-      filter: drop-shadow(6px 6px 10px blue); }
-    footer .redesSociales .ig:hover {
-      filter: drop-shadow(6px 6px 10px #e67487); }
-    footer .redesSociales .in:hover {
-      filter: drop-shadow(6px 6px 10px #6161ff); }
-    footer .redesSociales .wpp:hover {
-      filter: drop-shadow(6px 6px 10px #0bf00b); }
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0%; }
+  footer .redesSociales .redesCont {
+    text-align: center;
+    display: flex;
+    display: inline-block; }
+    footer .redesSociales .redesCont:hover {
+      border-radius: 50%;
+      transform: scale(1.1); }
+  footer .redesSociales .fb:hover {
+    filter: drop-shadow(3px 3px 5px blue); }
+  footer .redesSociales .ig:hover {
+    filter: drop-shadow(3px 3px 5px #e67487); }
+  footer .redesSociales .in:hover {
+    filter: drop-shadow(3px 3px 5px #6161ff); }
+  footer .redesSociales .wpp:hover {
+    filter: drop-shadow(3px 3px 5px #0bf00b); }
   footer .parrafoFooter {
     display: block; }
     footer .parrafoFooter .derechosReservados {
-      color: #C4C4C4; }
+      color: #FFFFFF; }
 
 .contenedorTrabajos .imgPag1, .contenedorTrabajos .imgPag2 {
   margin-top: 2.2rem;
@@ -61,8 +61,16 @@ footer {
   display: flex;
   justify-self: center; }
 
+/* reset */
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box; }
+
 /*estilos Index */
 .contenedor {
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-areas: "imagen " "contenido" "footer ";
   justify-content: center; }
@@ -70,7 +78,8 @@ footer {
     grid-area: imagen;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    filter: drop-shadow(5px 5px 5px black); }
   .contenedor .contenedorMain .slogan1 {
     grid-area: contenido;
     display: grid;
@@ -82,7 +91,7 @@ footer {
       text-align: center;
       font-family: 'Open Sans', sans-serif;
       font-family: 'Roboto', sans-serif;
-      font-size: 2rem;
+      font-size: 3rem;
       margin-top: 30px;
       margin-bottom: 30px; }
     .contenedor .contenedorMain .slogan1 .parrafoIndex {
@@ -90,7 +99,7 @@ footer {
       font-size: 1rem;
       text-align: center;
       padding: 5rem;
-      color: #1B3989; }
+      color: #FFFFFF; }
     .contenedor .contenedorMain .slogan1 .TituloFoto img {
       display: none; }
   .contenedor .contenedorMain footer {
@@ -100,11 +109,11 @@ footer {
       display: grid;
       grid-template-areas: "imagen contenido" "imagen contenido ";
       justify-content: center;
-      grid-template-columns: 40% 60%;
-      column-gap: 2rem; }
+      grid-template-columns: 50% 50%;
+      column-gap: 0rem; }
       .contenedor .contenedorMain .fotoIndex {
         display: flex;
-        width: 150%;
+        width: 100%;
         margin-bottom: 33rem; }
       .contenedor .contenedorMain .slogan1 {
         grid-template-areas: "tituloFoto" "titulo" "parrafo";
@@ -113,9 +122,12 @@ footer {
           margin-top: 7.5rem;
           display: flex;
           justify-content: center;
-          grid-area: tituloFoto; }
+          grid-area: tituloFoto;
+          filter: drop-shadow(2px 2px 3px black); }
           .contenedor .contenedorMain .slogan1 .TituloFoto img {
-            display: block; }
+            display: block;
+            height: auto;
+            width: auto; }
         .contenedor .contenedorMain .slogan1 .tituloIndex {
           grid-area: titulo;
           color: #FFFFFF;
@@ -123,7 +135,7 @@ footer {
           text-align: center;
           font-family: 'Open Sans', sans-serif;
           font-family: 'Roboto', sans-serif;
-          font-size: 2rem;
+          font-size: 3rem;
           margin-top: 30px;
           margin-bottom: 30px; }
         .contenedor .contenedorMain .slogan1 .parrafoIndex {
@@ -131,10 +143,9 @@ footer {
           font-weight: bold;
           font-size: 1rem;
           text-align: center;
-          color: #1B3989;
-          margin-bottom: 33rem; } }
-  .contenedor .redesSociales a img {
-    width: 30%; }
+          margin-left: 0rem;
+          margin-bottom: 15rem;
+          margin-right: 0rem; } }
   @media only screen and (min-width: 1024px) {
     .contenedor .contenedorMain {
       display: grid;
@@ -144,20 +155,23 @@ footer {
       column-gap: 0rem; }
       .contenedor .contenedorMain .fotoIndex {
         display: flex;
+        width: 80%; }
+      .contenedor .contenedorMain .slogan1 {
         width: 100%; }
-      .contenedor .contenedorMain .slogan1 .tituloIndex {
-        font-size: 2rem;
-        padding: 2rem;
-        margin-top: 2rem; }
-      .contenedor .contenedorMain .slogan1 .parrafoIndex {
-        font-size: 1.2rem; }
-    .contenedor .redesSociales a img {
-      width: 25%; } }
+        .contenedor .contenedorMain .slogan1 .tituloIndex {
+          font-size: 2rem;
+          padding-top: 2rem;
+          margin-top: 2rem; }
+        .contenedor .contenedorMain .slogan1 .parrafoIndex {
+          font-size: 1.2rem;
+          margin-left: 5rem;
+          margin-bottom: 15rem;
+          margin-right: 5rem; } }
 
 /*acá termina el Css del index y arranca el de "trabajos"*/
 .contenedorTrabajos {
   display: grid;
-  grid-template-areas: "titulo" "subtitulo1" "foto1" "parrafo1" "subtitulo2" "foto2" "parrafo2"; }
+  grid-template-areas: "titulo" "subtitulo1" "foto1" "parrafo1" "subtitulo2" "foto2" "parrafo2" "footer"; }
   .contenedorTrabajos .titulosHtml {
     grid-area: titulo;
     color: #FFFFFF;
@@ -165,7 +179,7 @@ footer {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
+    font-size: 3rem;
     margin-top: 30px;
     margin-bottom: 30px; }
   .contenedorTrabajos .imgPag1 {
@@ -179,7 +193,7 @@ footer {
     grid-area: parrafo1;
     text-align: center;
     padding: 2.5rem;
-    color: #1B3989; }
+    color: #FFFFFF; }
   .contenedorTrabajos .imgPag2 {
     grid-area: foto2;
     width: 100%; }
@@ -191,18 +205,24 @@ footer {
     grid-area: parrafo2;
     text-align: center;
     padding: 2.5rem;
-    color: #1B3989; }
+    color: #FFFFFF;
+    margin-bottom: 10rem; }
   .contenedorTrabajos .linkPag1 {
     text-decoration: none;
-    color: #070B0E; }
+    color: #FFFFFF; }
   .contenedorTrabajos .linkPag2 {
     text-decoration: none;
-    color: #070B0E; }
+    color: #FFFFFF; }
+  .contenedorTrabajos .comentarios-proyect {
+    font-weight: bold;
+    font-size: 1.1rem; }
+  .contenedorTrabajos footer {
+    grid-area: footer; }
 
 @media only screen and (min-width: 650px) {
   .contenedorTrabajos {
     display: grid;
-    grid-template-areas: "titulo titulo" "foto1 subtitulo1" "foto1 parrafo1" "subtitulo2 foto2" "parrafo2 foto2"; }
+    grid-template-areas: "titulo titulo" "foto1 subtitulo1" "foto1 parrafo1" "subtitulo2 foto2" "parrafo2 foto2" "footer footer"; }
     .contenedorTrabajos .titulosHtml {
       grid-area: titulo;
       color: #FFFFFF;
@@ -210,7 +230,7 @@ footer {
       text-align: center;
       font-family: 'Open Sans', sans-serif;
       font-family: 'Roboto', sans-serif;
-      font-size: 2rem;
+      font-size: 3rem;
       margin-top: 30px;
       margin-bottom: 30px; }
     .contenedorTrabajos .imgPag1 {
@@ -229,7 +249,7 @@ footer {
       grid-area: parrafo1;
       text-align: center;
       padding: 2.5rem;
-      color: #1B3989; }
+      color: #FFFFFF; }
     .contenedorTrabajos .imgPag2 {
       grid-area: foto2;
       margin-top: 2.2rem;
@@ -246,27 +266,35 @@ footer {
       grid-area: parrafo2;
       text-align: center;
       padding: 2.5rem;
-      color: #1B3989; }
+      color: #FFFFFF; }
     .contenedorTrabajos .linkPag1 {
       text-decoration: none;
-      color: #070B0E; }
+      color: #FFFFFF; }
     .contenedorTrabajos .linkPag2 {
       text-decoration: none;
-      color: #070B0E; } }
+      color: #FFFFFF; }
+    .contenedorTrabajos .footer .redesSociales a img {
+      width: 30%; } }
 
 @media only screen and (min-width: 1024px) {
   .contenedorTrabajos .imgPag1 {
     width: 22rem; }
   .contenedorTrabajos .imgPag2 {
-    width: 22rem; } }
+    width: 22rem; }
+  .contenedorTrabajos .parrafoSegundoProyect {
+    margin-bottom: 15rem; } }
 
 /* aca termina el css de conocimiento y empieza el de sobre mi*/
+.contenedorSobreMi .parrafoSobreMi {
+  margin-bottom: 11.5rem; }
+
 @media only screen and (min-width: 1024px) {
   .contenedorSobreMi {
     grid-template-areas: "titulo foto" "parrafo foto";
     grid-template-columns: 1fr 1fr; }
     .contenedorSobreMi .fotoYo {
-      align-self: center; }
+      align-self: center;
+      margin-bottom: 8rem; }
     .contenedorSobreMi .fotoYo img {
       width: 80%; }
     .contenedorSobreMi .subTituloSobreMi {
@@ -276,13 +304,12 @@ footer {
 
 /*acá termina el Css del Trabajos y arranca el de "Conocimientos" */
 .titulosHtml {
-  grid-area: titulo;
   color: #FFFFFF;
   font-weight: bold;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Roboto', sans-serif;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-top: 30px;
   margin-bottom: 30px; }
 
@@ -304,13 +331,13 @@ footer {
   margin-bottom: 5rem;
   padding: 5rem; }
   .contConocimientos .contenidoConocimiento .textoConocimiento {
+    font-size: 1.2rem;
     text-align: center;
-    color: #1B3989; }
+    color: #FFFFFF; }
 
-.footerConocimientos {
-  margin-top: 16.5rem; }
-  .footerConocimientos .linksRedes {
-    text-decoration: none; }
+@media only screen and (max-width: 650px) {
+  .contConocimientos .redesSociales a img {
+    width: 30%; } }
 
 /*acá termina el Css de conocimientos y arranca el de Sobre mi */
 .tituloSobreMi {
@@ -320,7 +347,7 @@ footer {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Roboto', sans-serif;
-  font-size: 2rem;
+  font-size: 3rem;
   margin-top: 30px;
   margin-bottom: 30px; }
 
@@ -337,14 +364,14 @@ footer {
       grid-area: titulo;
       font-size: 1.5rem;
       text-align: center;
-      color: #070B0E;
+      color: #FFFFFF;
       margin-top: 1rem;
       margin-bottom: 1rem; }
     .contenedorSobreMi .contenidoSobreMi {
       padding: 1.7rem;
       grid-area: parrafo;
       text-align: center;
-      color: #1B3989;
+      color: #FFFFFF;
       font-size: 1rem;
       margin-bottom: 1.5rem; } }
 
@@ -361,7 +388,7 @@ footer {
       grid-area: titulo;
       font-size: 1.5rem;
       text-align: center;
-      color: #070B0E;
+      color: #FFFFFF;
       margin-top: 1rem;
       margin-bottom: 1rem; }
     .contenedorSobreMi .contenidoSobreMi {
@@ -369,7 +396,7 @@ footer {
       padding-right: 8rem;
       grid-area: parrafo;
       text-align: center;
-      color: #1B3989;
+      color: #FFFFFF;
       font-size: 1.2rem;
       margin-bottom: 1.5rem; }
     .contenedorSobreMi .tituloSobreMi {
@@ -395,16 +422,27 @@ footer {
   width: 50%; }
   .redes-sociales a .redes-sociales a img {
     width: 55%; }
+  .redes-sociales a .fb-contact:hover {
+    filter: drop-shadow(3px 3px 5px blue); }
+  .redes-sociales a .ig-contact:hover {
+    filter: drop-shadow(3px 3px 5px #e67487); }
+  .redes-sociales a .in-contact:hover {
+    filter: drop-shadow(3px 3px 5px #6161ff); }
+  .redes-sociales a .wpp-contact:hover {
+    filter: drop-shadow(3px 3px 5px #0bf00b); }
 
 .formulario {
+  color: #FFFFFF;
   margin-top: 2rem;
   margin-left: 16%;
   height: 90%;
   width: 70%;
-  border: 2px solid #17A589;
+  border: 0px solid white;
   text-align: center; }
   .formulario #consultaFormulario {
-    width: 90%; }
+    width: 90%;
+    height: 8rem;
+    border-radius: 2%; }
 
 @media only screen and (min-width: 768px) {
   .redes-sociales a img {

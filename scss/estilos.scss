@@ -3,12 +3,20 @@
 @import "utilities/mixins";
 @import "utilities/extends";
 
+/* reset */
 
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
 
 
 /*estilos Index */
 
 .contenedor{
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-areas: "imagen "
                          "contenido"
@@ -22,6 +30,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            filter:drop-shadow( 5px 5px 5px black);
         }
 
         .slogan1{
@@ -40,7 +49,7 @@
                 font-size: 1rem;
                 text-align: center;
                 padding: 5rem;
-                color: $color-parrafos;
+                color: $color-textos;
             }
             .TituloFoto{
                 img{
@@ -48,12 +57,10 @@
                 }
             }
         }
-    
-
-    footer{
-        grid-area: footer;
-    }
-}    
+            footer{
+                grid-area: footer;
+            }
+    }    
     @media only screen and (min-width:650px){
         .contenedorMain{
             
@@ -63,12 +70,12 @@
                                  "imagen contenido ";
                                  
             justify-content: center;
-            grid-template-columns: 40% 60%;
-            column-gap: 2rem;
+            grid-template-columns: 50% 50%;
+            column-gap: 0rem;
     
             .fotoIndex{
                 display: flex;
-                width: 150%;
+                width: 100%;
                 margin-bottom: 33rem;
             }
 
@@ -82,8 +89,11 @@
                     display: flex;
                     justify-content: center;
                     grid-area: tituloFoto;
+                    filter:drop-shadow( 2px 2px 3px black);
                     img{
                         display: block;
+                        height: auto;
+                        width: auto;
                     }
                 }
                 .tituloIndex{
@@ -96,8 +106,9 @@
                     font-weight: bold;
                     font-size: 1rem;
                     text-align:center;
-                    color: $color-parrafos;
-                    margin-bottom: 33rem;
+                    margin-left: 0rem;
+                    margin-bottom: 15rem;
+                    margin-right: 0rem;
                 }
             }
             
@@ -105,9 +116,7 @@
         }
     }
     
-        .redesSociales a img{
-            width: 30%;
-        }
+        
         
     
     
@@ -125,27 +134,28 @@
     
             .fotoIndex{
                 display: flex;
-                width: 100%;
+                width: 80%;
                 
             }
     
             .slogan1{
-    
+                width: 100%;
                 .tituloIndex{
                     font-size: 2rem;
-                    padding: 2rem;
+                    padding-top: 2rem;
                     margin-top: 2rem;
                 }
                 
                 .parrafoIndex{
                     font-size: 1.2rem;
+                    margin-left: 5rem;
+                    margin-bottom: 15rem;
+                    margin-right: 5rem;
                 }
             }
         }
          
-        .redesSociales a img{
-            width: 25%;
-        }
+        
     }
 }
 
@@ -163,7 +173,8 @@
                          "parrafo1"
                          "subtitulo2"
                          "foto2"
-                         "parrafo2";
+                         "parrafo2"
+                         "footer";
 
     
 
@@ -182,14 +193,14 @@
         .tituloPrimerProyect {
             text-align: center;
             grid-area: subtitulo1;
-            color: $color-titulos;
+            color: $color-textos;
         }
 
         .parrafoPrimerProyect {
             grid-area: parrafo1;
             text-align: center;
             padding: 2.5rem;
-            color: $color-parrafos;
+            color: $color-textos;
         }
 
         .imgPag2 {
@@ -201,24 +212,35 @@
         .tituloSegundoProyect {
             grid-area: subtitulo2;
             text-align: center;
-            color: $color-titulos;
+            color: $color-textos;
         }
 
         .parrafoSegundoProyect {
             grid-area: parrafo2;
             text-align: center;
             padding: 2.5rem;
-            color: $color-parrafos;
+            color: $color-textos;
+            margin-bottom: 10rem;
         }
 
         .linkPag1{
             text-decoration: none;
-            color: $color-terciario;
+            color: $color-textos;
         }
         
         .linkPag2{
             text-decoration: none;
-            color: $color-terciario;
+            color: $color-textos;
+
+        }
+
+        .comentarios-proyect{
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        footer{
+            grid-area: footer;
         }
         
  
@@ -229,7 +251,8 @@
                         "foto1 subtitulo1"
                         "foto1 parrafo1"
                         "subtitulo2 foto2"
-                        "parrafo2 foto2";
+                        "parrafo2 foto2"
+                        "footer footer";
     .titulosHtml{
         grid-area: titulo;
         @include titulos;
@@ -247,14 +270,14 @@
         .tituloPrimerProyect {
             text-align: center;
             grid-area: subtitulo1;
-            color: $color-titulos;
+            color: $color-textos;
         }
 
         .parrafoPrimerProyect {
             grid-area: parrafo1;
             text-align: center;
             padding: 2.5rem;
-            color: $color-parrafos;
+            color: $color-textos;
         }
 
         .imgPag2 {
@@ -270,26 +293,34 @@
         .tituloSegundoProyect {
             grid-area: subtitulo2;
             text-align: center;
-            color: $color-titulos;
+            color: $color-textos;
         }
 
         .parrafoSegundoProyect {
             grid-area: parrafo2;
             text-align: center;
             padding: 2.5rem;
-            color: $color-parrafos;
+            color: $color-textos;
         }
 
         .linkPag1{
             text-decoration: none;
-            color: $color-terciario;
+            color: $color-textos;
         }
         
         .linkPag2{
             text-decoration: none;
-            color: $color-terciario
+            color: $color-textos
+        }
+        
+        .footer{
+            .redesSociales a img{
+                width: 30%;
+            }
         }
     } 
+
+    
 }
     .contenedorTrabajos{
         @media only screen and (min-width:1024px){
@@ -299,12 +330,20 @@
             .imgPag2{
                 width: 22rem;
             }
+            .parrafoSegundoProyect{
+                margin-bottom: 15rem;
+            }
         }
     
     }
     /* aca termina el css de conocimiento y empieza el de sobre mi*/
 
  .contenedorSobreMi{
+
+    .parrafoSobreMi{
+        margin-bottom: 11.5rem;
+    }
+
     @media only screen and (min-width:1024px){
         grid-template-areas: "titulo foto"
                              "parrafo foto";
@@ -312,6 +351,7 @@
         
         .fotoYo{
             align-self: center;
+            margin-bottom: 8rem;
         }
     
         .fotoYo img{
@@ -325,12 +365,13 @@
         .contenidoSobreMi{
             font-size: 1.1rem;
         }
+
+        
     }
 }    
 /*acá termina el Css del Trabajos y arranca el de "Conocimientos" */
 
 .titulosHtml{
-    grid-area: titulo;
     @include titulos;
 }
 .contConocimientos{
@@ -356,29 +397,32 @@
             }
         }
     }
+    
     .contenidoConocimiento{
         grid-area: subtit;
         margin-top: 5rem;
         margin-bottom: 5rem;
         padding: 5rem;
         .textoConocimiento{
+            font-size: 1.2rem;
             text-align: center;
-            color: $color-parrafos;
+            color: $color-textos;
+        }
+    }
+    @media only screen and (max-width:650px){
+        
+        .redesSociales a img{
+            width: 30%;
         }
     }
 }
 
-.footerConocimientos{
-    margin-top: 16.5rem;
-    .linksRedes{
-        text-decoration: none;
-    }
-}
+
 
 /*acá termina el Css de conocimientos y arranca el de Sobre mi */
 
 .tituloSobreMi{
-        color: $color-titulos;
+        color: $color-textos;
         @include titulos;
 }
 .contenedorSobreMi{
@@ -400,7 +444,7 @@
             grid-area: titulo;
             font-size: 1.5rem;
             text-align: center;
-            color: $color-terciario;
+            color: $color-textos;
             margin-top: 1rem;
             margin-bottom: 1rem;
         }
@@ -409,11 +453,12 @@
             padding: 1.7rem;
             grid-area: parrafo;
             text-align: center;
-            color: $color-parrafos;
+            color: $color-textos;
             font-size: 1rem;
             margin-bottom: 1.5rem;
         }
     }
+    
 
 }  .contenedorSobreMi{
     @media only screen and (min-width:650px){
@@ -434,7 +479,7 @@
             grid-area: titulo;
             font-size: 1.5rem;
             text-align: center;
-            color: $color-terciario;
+            color: $color-textos;
             margin-top: 1rem;
             margin-bottom: 1rem;
         }
@@ -444,7 +489,7 @@
             padding-right: 8rem;
             grid-area: parrafo;
             text-align: center;
-            color: $color-parrafos;
+            color: $color-textos;
             font-size: 1.2rem;
             margin-bottom: 1.5rem;
         }
@@ -483,25 +528,51 @@
 }
 /*acá termina el Css de Sobre mi y arranca el de Contacto */
 
-.redes-sociales a{
-    text-decoration: none;
-    margin-bottom: 3rem;
-    width: 50%;
-    .redes-sociales a img{
-        width: 55%;
-    }
-    
+.redes-sociales{
+    a{
+        text-decoration: none;
+        margin-bottom: 3rem;
+        width: 50%;
+        .redes-sociales a img{
+            width: 55%;
+        }
+        .fb-contact{
+            &:hover{
+                filter:drop-shadow( 3px 3px 5px map-get($map: $redesSociales, $key:facebook)); 
+            }
+        } 
+        .ig-contact{
+            &:hover{
+                filter:drop-shadow( 3px 3px 5px map-get($map: $redesSociales, $key:instagram)); 
+            }
+        }
+        .in-contact{
+            &:hover{
+                filter:drop-shadow( 3px 3px 5px map-get($map: $redesSociales, $key:Linkedin)); 
+            }
+        }
+        .wpp-contact{
+            &:hover{
+                filter:drop-shadow( 3px 3px 5px map-get($map: $redesSociales, $key:whatsApp)); 
+            }
+        }
+   }
 }
+    
+
 
 .formulario{
+    color: $color-textos;
     margin-top: 2rem;
     margin-left: 16%;
     height: 90%;
     width: 70%;
-    border: 2px solid #17A589;
+    border: 0px solid white;
     text-align: center;
     #consultaFormulario{
         width: 90%;
+        height: 8rem;
+        border-radius: 2%;
     }
 } 
 
