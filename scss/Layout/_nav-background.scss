@@ -58,18 +58,17 @@ header{
 }  
 
 body{
-    background: rgb(7,11,14);
-    background: linear-gradient(143deg, rgba(7,11,14,1) 0%, rgba(77,12,12,1) 51%, rgba(171,13,13,1) 100%);;
+    background-color: $color-terciario;
     position: relative;
     padding-bottom: 3rem;
 }
 
 footer{
-    background-color: $color-terciario;
+    background-color: $color-principal;
     text-align: center;
     width: 100%;
     position: absolute;
-    bottom: 0%;
+    bottom: -20%;
     .redesSociales{      
         
         .redesCont{
