@@ -5,11 +5,14 @@ header {
   top: 0%;
   border-bottom: 1px grey solid; }
   header nav ul .menuLista {
-    transition: 1.5s; }
+    transition: 1.5s;
+    color: black; }
     header nav ul .menuLista:hover {
       transform: translateY(3px);
       border-bottom: 1px solid #500808;
       color: #500808; }
+  header div ul li .ulContact {
+    font-weight: bold; }
   header div ul li a {
     font-size: 1.2rem; }
   header div ul li .info {
@@ -23,9 +26,10 @@ header {
     margin-left: 3rem; }
 
 body {
-  background-color: #2E3A44;
+  background-color: #000;
   position: relative;
-  padding-bottom: 3rem; }
+  padding-bottom: 3rem;
+  font-family: 'Quicksand', sans-serif; }
 
 footer {
   background-color: #690808;
@@ -90,12 +94,20 @@ footer {
       text-align: center;
       font-family: 'Open Sans', sans-serif;
       font-family: 'Roboto', sans-serif;
-      font-size: 3rem;
+      font-size: 3.5rem;
       margin-top: 30px;
       margin-bottom: 30px; }
+      .contenedor .contenedorMain .slogan1 .tituloIndex .tituloIndexFrase {
+        display: block;
+        font-size: 3rem;
+        font-family: 'Calligraffitti', cursive; }
+      .contenedor .contenedorMain .slogan1 .tituloIndex .sinBr {
+        display: block;
+        font-size: 3rem;
+        font-family: 'Calligraffitti', cursive; }
     .contenedor .contenedorMain .slogan1 .parrafoIndex {
       grid-area: parrafo;
-      font-size: 1rem;
+      font-size: 1.8rem;
       text-align: center;
       padding: 5rem;
       color: #FFFFFF; }
@@ -106,7 +118,7 @@ footer {
   @media only screen and (min-width: 650px) {
     .contenedor .contenedorMain {
       display: grid;
-      grid-template-areas: "imagen contenido" "imagen contenido ";
+      grid-template-areas: "contenido imagen" "contenido imagen ";
       justify-content: center;
       grid-template-columns: 50% 50%;
       column-gap: 0rem; }
@@ -134,7 +146,7 @@ footer {
           text-align: center;
           font-family: 'Open Sans', sans-serif;
           font-family: 'Roboto', sans-serif;
-          font-size: 3rem;
+          font-size: 3.5rem;
           margin-top: 30px;
           margin-bottom: 30px; }
         .contenedor .contenedorMain .slogan1 .parrafoIndex {
@@ -148,9 +160,9 @@ footer {
   @media only screen and (min-width: 1024px) {
     .contenedor .contenedorMain {
       display: grid;
-      grid-template-areas: "imagen contenido" "imagen contenido ";
+      grid-template-areas: "contenido imagen" "contenido imagen ";
       justify-content: center;
-      grid-template-columns: 40% 60%;
+      grid-template-columns: 60% 40%;
       column-gap: 0rem; }
       .contenedor .contenedorMain .fotoIndex {
         display: flex;
@@ -178,7 +190,7 @@ footer {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-top: 30px;
     margin-bottom: 30px; }
   .contenedorTrabajos .imgPag1 {
@@ -208,10 +220,10 @@ footer {
     margin-bottom: 10rem; }
   .contenedorTrabajos .linkPag1 {
     text-decoration: none;
-    color: #FFFFFF; }
+    color: #690808; }
   .contenedorTrabajos .linkPag2 {
     text-decoration: none;
-    color: #FFFFFF; }
+    color: #690808; }
   .contenedorTrabajos .comentarios-proyect {
     font-weight: bold;
     font-size: 1.1rem; }
@@ -221,7 +233,9 @@ footer {
 @media only screen and (min-width: 650px) {
   .contenedorTrabajos {
     display: grid;
-    grid-template-areas: "titulo titulo" "foto1 subtitulo1" "foto1 parrafo1" "subtitulo2 foto2" "parrafo2 foto2" "footer footer"; }
+    grid-template-areas: "titulo titulo" "foto1 subtitulo1" "foto1 parrafo1" "foto2 subtitulo2" "foto2 parrafo2" "footer footer";
+    grid-template-columns: 1fr 1fr;
+    row-gap: 5rem; }
     .contenedorTrabajos .titulosHtml {
       grid-area: titulo;
       color: #FFFFFF;
@@ -229,19 +243,18 @@ footer {
       text-align: center;
       font-family: 'Open Sans', sans-serif;
       font-family: 'Roboto', sans-serif;
-      font-size: 3rem;
+      font-size: 3.5rem;
       margin-top: 30px;
       margin-bottom: 30px; }
     .contenedorTrabajos .imgPag1 {
       grid-area: foto1;
       margin-top: 2.2rem;
       margin-bottom: 2.2rem;
-      width: 17rem;
+      width: 50%;
       display: flex;
       justify-self: center;
       border-radius: 10%; }
     .contenedorTrabajos .tituloPrimerProyect {
-      text-align: center;
       grid-area: subtitulo1;
       color: #FFFFFF; }
     .contenedorTrabajos .parrafoPrimerProyect {
@@ -253,7 +266,7 @@ footer {
       grid-area: foto2;
       margin-top: 2.2rem;
       margin-bottom: 2.2rem;
-      width: 17rem;
+      width: 50%;
       display: flex;
       justify-self: center;
       border-radius: 10%; }
@@ -268,20 +281,35 @@ footer {
       color: #FFFFFF; }
     .contenedorTrabajos .linkPag1 {
       text-decoration: none;
-      color: #FFFFFF; }
+      font-weight: bold;
+      border-bottom: 1px solid transparent; }
+      .contenedorTrabajos .linkPag1:hover {
+        border-bottom: 1px solid #FFFFFF;
+        width: 100%;
+        height: 100%;
+        transition: 2s; }
     .contenedorTrabajos .linkPag2 {
       text-decoration: none;
-      color: #FFFFFF; }
+      font-weight: bold;
+      border-bottom: 1px solid transparent; }
+      .contenedorTrabajos .linkPag2:hover {
+        border-bottom: 1px solid #FFFFFF;
+        width: 100%;
+        height: 100%;
+        transition: 2s; }
     .contenedorTrabajos .footer .redesSociales a img {
       width: 30%; } }
 
 @media only screen and (min-width: 1024px) {
   .contenedorTrabajos .imgPag1 {
-    width: 22rem; }
+    width: 50%; }
   .contenedorTrabajos .imgPag2 {
-    width: 22rem; }
+    width: 50%; }
   .contenedorTrabajos .parrafoSegundoProyect {
-    margin-bottom: 15rem; } }
+    margin-bottom: 15rem;
+    font-size: 1.4rem; }
+  .contenedorTrabajos .parrafoPrimerProyect {
+    font-size: 1.4rem; } }
 
 /* aca termina el css de conocimiento y empieza el de sobre mi*/
 .contenedorSobreMi .parrafoSobreMi {
@@ -308,7 +336,7 @@ footer {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Roboto', sans-serif;
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-top: 30px;
   margin-bottom: 30px; }
 
@@ -330,9 +358,11 @@ footer {
   margin-bottom: 5rem;
   padding: 5rem; }
   .contConocimientos .contenidoConocimiento .textoConocimiento {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-align: center;
     color: #FFFFFF; }
+    .contConocimientos .contenidoConocimiento .textoConocimiento .textoConocimientoSaltos {
+      display: block; }
 
 @media only screen and (max-width: 650px) {
   .contConocimientos .redesSociales a img {
@@ -346,7 +376,7 @@ footer {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Roboto', sans-serif;
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-top: 30px;
   margin-bottom: 30px; }
 

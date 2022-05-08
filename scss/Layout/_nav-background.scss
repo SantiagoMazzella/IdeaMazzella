@@ -9,6 +9,7 @@ header{
         ul{
             .menuLista{
                 transition: 1.5s; 
+                color: black;
                 &:hover{
                     transform: translateY(3px);
                     border-bottom: 1px solid #500808;
@@ -22,8 +23,11 @@ header{
     div{
         ul{
             li{
+                .ulContact{
+                    font-weight: bold;
+                }
                 a{
-                    font-size: 1.2rem;
+                    font-size: 1.2rem;  
                 }
                 .info{
                     margin-right: 3rem;
@@ -61,6 +65,7 @@ body{
     background-color: $color-terciario;
     position: relative;
     padding-bottom: 3rem;
+    font-family: 'Quicksand', sans-serif;
 }
 
 footer{

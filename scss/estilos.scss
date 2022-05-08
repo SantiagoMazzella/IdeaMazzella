@@ -42,11 +42,21 @@
             .tituloIndex{
                 grid-area: titulo;
                 @include titulos;
+                .tituloIndexFrase{
+                    display: block;
+                    font-size: 3rem;
+                    font-family: 'Calligraffitti', cursive;
+                }
+                .sinBr{
+                    display: block;
+                    font-size: 3rem;
+                    font-family: 'Calligraffitti', cursive;
+                }
             }
             
             .parrafoIndex{
                 grid-area: parrafo;
-                font-size: 1rem;
+                font-size: 1.8rem;
                 text-align: center;
                 padding: 5rem;
                 color: $color-textos;
@@ -66,8 +76,8 @@
             
 
             display: grid;
-            grid-template-areas: "imagen contenido"
-                                 "imagen contenido ";
+            grid-template-areas: "contenido imagen"
+                                 "contenido imagen ";
                                  
             justify-content: center;
             grid-template-columns: 50% 50%;
@@ -125,11 +135,11 @@
     
         .contenedorMain{
             display: grid;
-            grid-template-areas: "imagen contenido"
-                                 "imagen contenido ";
+            grid-template-areas: "contenido imagen"
+                                 "contenido imagen ";
                                  
             justify-content: center;
-            grid-template-columns: 40% 60%;
+            grid-template-columns: 60% 40%;
             column-gap: 0rem;
     
             .fotoIndex{
@@ -225,12 +235,12 @@
 
         .linkPag1{
             text-decoration: none;
-            color: $color-textos;
+            color: $color-principal;
         }
         
         .linkPag2{
             text-decoration: none;
-            color: $color-textos;
+            color: $color-principal;
 
         }
 
@@ -250,9 +260,11 @@
     grid-template-areas: "titulo titulo"
                         "foto1 subtitulo1"
                         "foto1 parrafo1"
-                        "subtitulo2 foto2"
-                        "parrafo2 foto2"
+                        "foto2 subtitulo2"
+                        "foto2 parrafo2"
                         "footer footer";
+    grid-template-columns: 1fr 1fr;
+    row-gap: 5rem;
     .titulosHtml{
         grid-area: titulo;
         @include titulos;
@@ -261,14 +273,13 @@
         grid-area: foto1;
         margin-top: 2.2rem;
         margin-bottom: 2.2rem;
-        width: 17rem;
+        width: 50%;
         display: flex;
         justify-self: center;
         border-radius: 10%;
         }
 
         .tituloPrimerProyect {
-            text-align: center;
             grid-area: subtitulo1;
             color: $color-textos;
         }
@@ -284,7 +295,7 @@
             grid-area: foto2;
             margin-top: 2.2rem;
             margin-bottom: 2.2rem;
-            width: 17rem;
+            width: 50%;
             display: flex;
             justify-self: center;
             border-radius: 10%;
@@ -305,12 +316,26 @@
 
         .linkPag1{
             text-decoration: none;
-            color: $color-textos;
+            font-weight: bold;
+            border-bottom: 1px solid transparent;
+            &:hover{
+                border-bottom: 1px solid $color-textos;
+                width: 100%;
+                height: 100%;
+                transition: 2s;
+            }
         }
         
         .linkPag2{
             text-decoration: none;
-            color: $color-textos
+            font-weight: bold;
+            border-bottom: 1px solid transparent;
+            &:hover{
+                border-bottom: 1px solid $color-textos;
+                width: 100%;
+                height: 100%;
+                transition: 2s;
+            }
         }
         
         .footer{
@@ -325,13 +350,17 @@
     .contenedorTrabajos{
         @media only screen and (min-width:1024px){
             .imgPag1{
-                width: 22rem;
+                width: 50%;
             }
             .imgPag2{
-                width: 22rem;
+                width: 50%;
             }
             .parrafoSegundoProyect{
                 margin-bottom: 15rem;
+                font-size: 1.4rem;
+            }
+            .parrafoPrimerProyect{
+               font-size: 1.4rem;
             }
         }
     
@@ -404,9 +433,12 @@
         margin-bottom: 5rem;
         padding: 5rem;
         .textoConocimiento{
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             text-align: center;
             color: $color-textos;
+            .textoConocimientoSaltos{
+                display: block;
+            }
         }
     }
     @media only screen and (max-width:650px){
