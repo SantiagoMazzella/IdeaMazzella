@@ -9,6 +9,8 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-size: 1.2rem;
 }
 
 
@@ -43,7 +45,7 @@
     
             .parrafoIndex{
                 grid-area: parrafo;
-                font-size: 1.8rem;
+                font-size: 2rem;
                 text-align: center;
                 padding: 1.5rem;
                 color: $color-textos;
@@ -58,7 +60,7 @@
         }
         .tituloServicios{
             h2{
-                color: $color-secundario;
+                color: rgb(0, 110, 255);
                 font-size: 2.5rem;
                 margin-bottom: 2rem;
                 display: block;
@@ -69,9 +71,9 @@
             grid-area: servicios;
             text-align: center;
             .cajaServicios{
-                background-color: rgb(211, 211, 211);
+                background-color: rgba(211, 211, 211, 0.6);
                 margin: 0.7rem;
-                border: 2px solid $color-secundario;
+                border-radius: 2%;
             }
             .serviciosIndex{
                 color: $color-secundario;              
@@ -213,7 +215,7 @@
                 .parrafoIndex{
                     grid-area: parrafo;
                     font-weight: bold;
-                    font-size: 1rem;
+                    font-size: 1.5rem;
                     text-align:center;
                     margin-left: 0rem;
                     margin-bottom: 15rem;
@@ -223,7 +225,7 @@
 
             .fraseIndex{
                 margin-bottom: 10rem;
-                margin-right: 8rem;
+                margin-right: 3rem;
                 .tituloIndex{
                     grid-area: titulo;
                     @include titulos;
@@ -284,7 +286,7 @@
                 width: 100%;
                 
                 .parrafoIndex{
-                    font-size: 1.2rem;
+                    font-size: 2rem;
                     margin-left: 5rem;
                     margin-bottom: 15rem;
                     margin-right: 5rem;
@@ -453,7 +455,7 @@
     @media only screen and (min-width:650px){
         
          .card{
-             margin: 30px 12rem;
+             margin: 30px 11.3rem;
              .imgCard{
                  position: relative;
                  width: 300px;
@@ -509,13 +511,13 @@
         }
     
         .contenidoSobreMi{
-            font-size: 1.1rem;
+            font-size: 2.0rem;
         }
 
         
     }
 }    
-/*acá termina el Css del Trabajos y arranca el de "Conocimientos" */
+/*acá termina el Css del Sobre mi y arranca el de "Conocimientos" */
 
 .titulosHtml{
     @include titulos;
@@ -755,13 +757,10 @@
 @media only screen and (min-width:768px){
     .containerContacto{
 
-        .contacto-total{
-                    display: grid;
-                    grid-template-columns: 2fr 1fr;
-        
-    
+        .contacto-total{    
         margin: 5rem;
         }
+        
         .contacto-info{
             h2, ul, p{
                 padding: 1rem;
@@ -778,7 +777,10 @@
 
 @media only screen and (min-width:1200px){
 
-    
+    .contacto-total{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    } 
     .redes-sociales a img{
         width: 30%;
     }

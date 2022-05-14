@@ -58,7 +58,9 @@ footer {
 * {
   margin: 0%;
   padding: 0%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-size: 1.2rem; }
 
 /*estilos Index */
 .contenedor {
@@ -79,14 +81,14 @@ footer {
     grid-template-areas: "titulo" "parrafo"; }
     .contenedor .contenedorMain .slogan1 .parrafoIndex {
       grid-area: parrafo;
-      font-size: 1.8rem;
+      font-size: 2rem;
       text-align: center;
       padding: 1.5rem;
       color: #FFFFFF; }
     .contenedor .contenedorMain .slogan1 .TituloFoto img {
       display: none; }
   .contenedor .contenedorMain .tituloServicios h2 {
-    color: #1B3989;
+    color: #006eff;
     font-size: 2.5rem;
     margin-bottom: 2rem;
     display: block;
@@ -95,9 +97,9 @@ footer {
     grid-area: servicios;
     text-align: center; }
     .contenedor .contenedorMain .servicios .cajaServicios {
-      background-color: lightgray;
+      background-color: rgba(211, 211, 211, 0.6);
       margin: 0.7rem;
-      border: 2px solid #1B3989; }
+      border-radius: 2%; }
     .contenedor .contenedorMain .servicios .serviciosIndex {
       color: #1B3989; }
     .contenedor .contenedorMain .servicios .contenedorFrase .fraseIndexDiseño {
@@ -151,7 +153,7 @@ footer {
       color: #FFFFFF;
       font-weight: bold;
       text-align: center;
-      font-family: 'Aclonica', sans-serif;
+      font-family: 'Archivo Narrow', sans-serif;
       font-size: 2rem;
       margin-top: 30px;
       margin-bottom: 30px;
@@ -190,20 +192,20 @@ footer {
         .contenedor .contenedorMain .slogan1 .parrafoIndex {
           grid-area: parrafo;
           font-weight: bold;
-          font-size: 1rem;
+          font-size: 1.5rem;
           text-align: center;
           margin-left: 0rem;
           margin-bottom: 15rem;
           margin-right: 0rem; }
       .contenedor .contenedorMain .fraseIndex {
         margin-bottom: 10rem;
-        margin-right: 8rem; }
+        margin-right: 3rem; }
         .contenedor .contenedorMain .fraseIndex .tituloIndex {
           grid-area: titulo;
           color: #FFFFFF;
           font-weight: bold;
           text-align: center;
-          font-family: 'Aclonica', sans-serif;
+          font-family: 'Archivo Narrow', sans-serif;
           font-size: 2rem;
           margin-top: 30px;
           margin-bottom: 30px; }
@@ -231,7 +233,7 @@ footer {
       .contenedor .contenedorMain .slogan1 {
         width: 100%; }
         .contenedor .contenedorMain .slogan1 .parrafoIndex {
-          font-size: 1.2rem;
+          font-size: 2rem;
           margin-left: 5rem;
           margin-bottom: 15rem;
           margin-right: 5rem; }
@@ -346,7 +348,7 @@ footer {
 
 @media only screen and (min-width: 650px) {
   .contenedorTrabajos .card {
-    margin: 30px 12rem; }
+    margin: 30px 11.3rem; }
     .contenedorTrabajos .card .imgCard {
       position: relative;
       width: 300px;
@@ -380,14 +382,14 @@ footer {
     .contenedorSobreMi .subTituloSobreMi {
       font-size: 1.8rem; }
     .contenedorSobreMi .contenidoSobreMi {
-      font-size: 1.1rem; } }
+      font-size: 2.0rem; } }
 
-/*acá termina el Css del Trabajos y arranca el de "Conocimientos" */
+/*acá termina el Css del Sobre mi y arranca el de "Conocimientos" */
 .titulosHtml {
   color: #FFFFFF;
   font-weight: bold;
   text-align: center;
-  font-family: 'Aclonica', sans-serif;
+  font-family: 'Archivo Narrow', sans-serif;
   font-size: 2rem;
   margin-top: 30px;
   margin-bottom: 30px; }
@@ -426,7 +428,7 @@ footer {
   color: #FFFFFF;
   font-weight: bold;
   text-align: center;
-  font-family: 'Aclonica', sans-serif;
+  font-family: 'Archivo Narrow', sans-serif;
   font-size: 2rem;
   margin-top: 30px;
   margin-bottom: 30px; }
@@ -549,8 +551,6 @@ footer {
 
 @media only screen and (min-width: 768px) {
   .containerContacto .contacto-total {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
     margin: 5rem; }
   .containerContacto .contacto-info h2, .containerContacto .contacto-info ul, .containerContacto .contacto-info p {
     padding: 1rem;
@@ -559,5 +559,8 @@ footer {
     width: 45%; } }
 
 @media only screen and (min-width: 1200px) {
+  .contacto-total {
+    display: grid;
+    grid-template-columns: 2fr 1fr; }
   .redes-sociales a img {
     width: 30%; } }
