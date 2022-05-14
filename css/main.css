@@ -318,7 +318,7 @@ footer {
         .contenedorTrabajos .card:hover .contCard a {
           text-decoration: none;
           color: #690808;
-          font-size: 2rem; }
+          font-size: 1.3rem; }
     .contenedorTrabajos .card .imgCard {
       position: relative;
       width: 150px;
@@ -337,8 +337,8 @@ footer {
       visibility: hidden;
       opacity: 0;
       transition: 0.3s ease-in-out; }
-      .contenedorTrabajos .card .contCard .spanTrabajos {
-        font-weight: bold; }
+      .contenedorTrabajos .card .contCard p {
+        font-size: 1rem; }
 
 footer {
   grid-area: footer; }

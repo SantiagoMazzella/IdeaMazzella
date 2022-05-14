@@ -409,7 +409,7 @@
                 a{
                     text-decoration: none;
                     color: $color-principal;
-                    font-size: 2rem;
+                    font-size: 1.3rem;
                 }
             }
         }
@@ -434,9 +434,10 @@
             visibility: hidden;
             opacity: 0;
             transition: 0.3s ease-in-out;
-            .spanTrabajos{
-                font-weight: bold;
+            p{
+                font-size: 1rem;
             }
+            
             
         }
     }
