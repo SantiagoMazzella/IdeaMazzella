@@ -45,7 +45,7 @@
                 grid-area: parrafo;
                 font-size: 1.8rem;
                 text-align: center;
-                padding: 5rem;
+                padding: 1.5rem;
                 color: $color-textos;
             }
 
@@ -82,10 +82,10 @@
             .contenedorFrase{
                 .fraseIndexDiseño{
                     color: $color-secundario;
-                    font-size: 0.8rem;
+                    
                     .palabraDiseño{
-                        margin: -0.2%;
-                        font-size: 2rem;
+                        margin: -1%;
+                        font-size: 1.45rem;
                         transition: font-size, font-weight, color 0.2s;
                         transition-delay: 0.8s;
                         &:hover{
@@ -99,8 +99,8 @@
                         padding-left: 0.5rem;
                     }
                     .palabraPersonalizado{
-                        margin: -0.2%;
-                        font-size: 2rem;
+                        margin: -1%;
+                        font-size: 1.45rem;
                         transition: font-size, font-weight, color 0.2s;
                         transition-delay: 0.8s;
                         &:hover{
@@ -237,6 +237,18 @@
             .servicios{
                 grid-area: servicios;
                 text-align: start;
+                .contenedorFrase{
+                    .fraseIndexDiseño{
+                        .palabraPersonalizado{
+                            margin: -0.5%;
+                            font-size: 1.8rem;
+                        }
+                        .palabraDiseño{
+                            margin: -0.5%;
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
             }
             
     
@@ -302,7 +314,7 @@
                         color: $color-secundario;
                         
                         .palabraDiseño{
-                            margin: -0.2%;
+                            margin: -0.4%;
                             font-size: 2rem;
                             transition: font-size, font-weight, color 0.2s;
                             transition-delay: 0.8s;
@@ -317,7 +329,7 @@
                             padding-left: 0.5rem;
                         }
                         .palabraPersonalizado{
-                            margin: -0.2%;
+                            margin: -0.4%;
                             font-size: 2rem;
                             transition: font-size, font-weight, color 0.2s;
                             transition-delay: 0.8s;
@@ -663,7 +675,7 @@
 
 
 .footerContacto{
-    margin-top: 500px;
+    bottom: -40%;
 }
     
 .containerContacto{
