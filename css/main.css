@@ -313,6 +313,9 @@ footer {
         opacity: 1;
         margin-top: -40px;
         transition-delay: 0.3s; }
+        .contenedorTrabajos .card:hover .contCard a {
+          text-decoration: none;
+          color: #690808; }
     .contenedorTrabajos .card .imgCard {
       position: relative;
       width: 250px;
