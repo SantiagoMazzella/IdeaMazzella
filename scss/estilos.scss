@@ -20,6 +20,8 @@
     display: grid;
     grid-template-areas: "imagen "
                          "contenido"
+                         "frase"
+                         "servicios"
                          "footer ";
     justify-content: center;
 
@@ -39,21 +41,6 @@
             grid-template-areas: "titulo"
                                  "parrafo";
     
-            .tituloIndex{
-                grid-area: titulo;
-                @include titulos;
-                .tituloIndexFrase{
-                    display: block;
-                    font-size: 3rem;
-                    font-family: 'Calligraffitti', cursive;
-                }
-                .sinBr{
-                    display: block;
-                    font-size: 3rem;
-                    font-family: 'Calligraffitti', cursive;
-                }
-            }
-            
             .parrafoIndex{
                 grid-area: parrafo;
                 font-size: 1.8rem;
@@ -61,23 +48,139 @@
                 padding: 5rem;
                 color: $color-textos;
             }
+
             .TituloFoto{
                 img{
-                    display: none;
+                     display: none;
                 }
+             }
+                
+        }
+        .tituloServicios{
+            h2{
+                color: $color-secundario;
+                font-size: 2.5rem;
+                margin-bottom: 2rem;
+                display: block;
+                text-align: center;
             }
         }
-            footer{
-                grid-area: footer;
+        .servicios{
+            grid-area: servicios;
+            text-align: center;
+            .cajaServicios{
+                background-color: rgb(211, 211, 211);
+                margin: 0.7rem;
+                border: 2px solid $color-secundario;
             }
-    }    
+            .serviciosIndex{
+                color: $color-secundario;              
+            }
+            
+            
+
+            .contenedorFrase{
+                .fraseIndexDiseño{
+                    color: $color-secundario;
+                    font-size: 0.8rem;
+                    .palabraDiseño{
+                        margin: -0.2%;
+                        font-size: 2rem;
+                        transition: font-size, font-weight, color 0.2s;
+                        transition-delay: 0.8s;
+                        &:hover{
+                            font-size: 3rem;
+                            transition: font-size 0.2s;
+                            color: $color-principal;
+                            font-weight: bold;
+                        }
+                    }
+                    .letraP{
+                        padding-left: 0.5rem;
+                    }
+                    .palabraPersonalizado{
+                        margin: -0.2%;
+                        font-size: 2rem;
+                        transition: font-size, font-weight, color 0.2s;
+                        transition-delay: 0.8s;
+                        &:hover{
+                            font-size: 3rem;
+                            transition: font-size 0.2s;
+                            color: $color-principal;
+                            font-weight: bold;
+                        }
+                    }
+                } 
+            }
+
+            .contResponsive{
+                color: $color-secundario;
+                .responsiveIndex{
+                    font-size: 2rem;
+                    transition: font-size 1s;
+                    transition-delay: 0.8s;
+                    &:hover{
+                        font-size: 3rem;
+                        transition: font-size 1s;
+                    }
+                }
+            }
+            .contSeo{
+                cursor: url(../img/lupa.png), auto;
+                .tituloSeo{
+                    color: $color-secundario;
+                    font-size: 2rem;
+                }
+                
+            }
+                    
+            .parrafosServicios{
+                color: #000;
+                font-size: 1.3rem;
+            }
+        }
+
+        footer{
+            grid-area: footer;
+        }
+            
+        
+    }
+    .fraseIndex{
+        display: grid;
+        grid-area: frase;
+        .tituloIndex{
+             grid-area: titulo;
+             @include titulos;
+             font-size: 1.5rem;
+
+            .tituloIndexFrase{
+                 display: block;
+                 font-size: 1.5rem;
+                 font-family: 'Calligraffitti', cursive;
+                }
+
+            .sinBr{
+                 display: block;
+                 font-size: 1.5rem;
+                 font-family: 'Calligraffitti', cursive;
+                }
+        }
+        
+    }
+        
+        
+        
     @media only screen and (min-width:650px){
         .contenedorMain{
             
 
             display: grid;
             grid-template-areas: "contenido imagen"
-                                 "contenido imagen ";
+                                 "contenido frase "
+                                 "tituloS tituloS"
+                                 "servicios servicios"
+                                 "footer footer";
                                  
             justify-content: center;
             grid-template-columns: 50% 50%;
@@ -86,7 +189,7 @@
             .fotoIndex{
                 display: flex;
                 width: 100%;
-                margin-bottom: 33rem;
+                
             }
 
             .slogan1{
@@ -106,10 +209,6 @@
                         width: auto;
                     }
                 }
-                .tituloIndex{
-                    grid-area: titulo;
-                    @include titulos;
-                }
                     
                 .parrafoIndex{
                     grid-area: parrafo;
@@ -120,6 +219,24 @@
                     margin-bottom: 15rem;
                     margin-right: 0rem;
                 }
+            }
+
+            .fraseIndex{
+                margin-bottom: 10rem;
+                margin-right: 8rem;
+                .tituloIndex{
+                    grid-area: titulo;
+                    @include titulos;
+                }
+            }
+
+            .tituloServicios{
+                grid-area: tituloS;
+            }
+
+            .servicios{
+                grid-area: servicios;
+                text-align: start;
             }
             
     
@@ -136,7 +253,10 @@
         .contenedorMain{
             display: grid;
             grid-template-areas: "contenido imagen"
-                                 "contenido imagen ";
+                                 "contenido frase"
+                                 "tituloS tituloS"
+                                 "servicios servicios"
+                                 "footer footer";
                                  
             justify-content: center;
             grid-template-columns: 60% 40%;
@@ -150,11 +270,6 @@
     
             .slogan1{
                 width: 100%;
-                .tituloIndex{
-                    font-size: 2rem;
-                    padding-top: 2rem;
-                    margin-top: 2rem;
-                }
                 
                 .parrafoIndex{
                     font-size: 1.2rem;
@@ -162,6 +277,84 @@
                     margin-bottom: 15rem;
                     margin-right: 5rem;
                 }
+            }
+            .tituloServicios{
+                h2{
+                    color: rgb(0, 110, 255);
+                    font-size: 3rem;
+                    margin-bottom: 2rem;
+                    display: block;
+                }
+                                
+            }
+            .servicios{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-area: servicios;
+                
+                .serviciosIndex{
+                    color: $color-secundario;              
+                }
+                
+    
+                .contenedorFrase{
+                    .fraseIndexDiseño{
+                        color: $color-secundario;
+                        
+                        .palabraDiseño{
+                            margin: -0.2%;
+                            font-size: 2rem;
+                            transition: font-size, font-weight, color 0.2s;
+                            transition-delay: 0.8s;
+                            &:hover{
+                                font-size: 3rem;
+                                transition: font-size 0.2s;
+                                color: $color-principal;
+                                font-weight: bold;
+                            }
+                        }
+                        .letraP{
+                            padding-left: 0.5rem;
+                        }
+                        .palabraPersonalizado{
+                            margin: -0.2%;
+                            font-size: 2rem;
+                            transition: font-size, font-weight, color 0.2s;
+                            transition-delay: 0.8s;
+                            &:hover{
+                                font-size: 3rem;
+                                transition: font-size 0.2s;
+                                color: $color-principal;
+                                font-weight: bold;
+                            }
+                        }
+                    } 
+                }
+    
+                .contResponsive{
+                    color: $color-secundario;
+                    .responsiveIndex{
+                        font-size: 2rem;
+                        transition: font-size 1s;
+                        transition-delay: 0.8s;
+                        &:hover{
+                            font-size: 3rem;
+                            transition: font-size 1s;
+                        }
+                    }
+                }
+                .contSeo{
+                    color: $color-secundario;
+                }
+                        
+                .parrafosServicios{
+                    color: #000;
+                    font-size: 1.3rem;
+                }
+            }
+    
+            footer{
+                grid-area: footer;
             }
         }
          
@@ -175,196 +368,104 @@
 
 
 .contenedorTrabajos{
-    
-        display: grid;
-    grid-template-areas: "titulo"
-                         "subtitulo1"
-                         "foto1"
-                         "parrafo1"
-                         "subtitulo2"
-                         "foto2"
-                         "parrafo2"
-                         "footer";
-
-    
-
-        .titulosHtml{
-            grid-area: titulo;
-        @include titulos;
-
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    .card{
+        position: relative;
+        width: 500px;
+        height: 320px;
+        margin: 30px 1rem;
+        padding: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 50px rgba(255, 255, 255, 0.5);
+        transition: 0.3s ease-in-out;
+        &:hover{
+            height: 620px;
+            .contCard{
+                visibility: visible;
+                opacity: 1;
+                margin-top: -40px;
+                transition-delay: 0.3s;
+            }
         }
-        .imgPag1{
-            grid-area: foto1;
-            width: 100%;
-        @extend  %imagenesTrabajos;
-        
+        .imgCard{
+            position: relative;
+            width: 250px;
+            height: 250px;
+            top: -30px;
+            left: 3px;
+            box-shadow: 0 5px 20px rgba (255, 255, 255, 0.2) ;
+            img{
+                width: 100%;
+                
+            }
         }
-
-        .tituloPrimerProyect {
+        .contCard{
+            position: relative;
+            margin-top: -140px ;
+            padding: 10px 15px;
             text-align: center;
-            grid-area: subtitulo1;
-            color: $color-textos;
-        }
-
-        .parrafoPrimerProyect {
-            grid-area: parrafo1;
-            text-align: center;
-            padding: 2.5rem;
-            color: $color-textos;
-        }
-
-        .imgPag2 {
-            grid-area: foto2;
-            width: 100%;
-            @extend  %imagenesTrabajos;
-     }
-
-        .tituloSegundoProyect {
-            grid-area: subtitulo2;
-            text-align: center;
-            color: $color-textos;
-        }
-
-        .parrafoSegundoProyect {
-            grid-area: parrafo2;
-            text-align: center;
-            padding: 2.5rem;
-            color: $color-textos;
-            margin-bottom: 10rem;
-        }
-
-        .linkPag1{
-            text-decoration: none;
             color: $color-principal;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+            .spanTrabajos{
+                font-weight: bold;
+            }
+            
         }
-        
-        .linkPag2{
-            text-decoration: none;
-            color: $color-principal;
-
-        }
-
-        .comentarios-proyect{
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
+    }
+    
+}
 
         footer{
             grid-area: footer;
         }
+        .footerTrabajos{
+            position: relative;
+            top: 20rem;
+        }
         
  
-} .contenedorTrabajos{
+.contenedorTrabajos{
     @media only screen and (min-width:650px){
-        display: grid;
-    grid-template-areas: "titulo titulo"
-                        "foto1 subtitulo1"
-                        "foto1 parrafo1"
-                        "foto2 subtitulo2"
-                        "foto2 parrafo2"
-                        "footer footer";
-    grid-template-columns: 1fr 1fr;
-    row-gap: 5rem;
-    .titulosHtml{
-        grid-area: titulo;
-        @include titulos;
-        }
-        .imgPag1{
-        grid-area: foto1;
-        margin-top: 2.2rem;
-        margin-bottom: 2.2rem;
-        width: 50%;
-        display: flex;
-        justify-self: center;
-        border-radius: 10%;
-        }
-
-        .tituloPrimerProyect {
-            grid-area: subtitulo1;
-            color: $color-textos;
-        }
-
-        .parrafoPrimerProyect {
-            grid-area: parrafo1;
-            text-align: center;
-            padding: 2.5rem;
-            color: $color-textos;
-        }
-
-        .imgPag2 {
-            grid-area: foto2;
-            margin-top: 2.2rem;
-            margin-bottom: 2.2rem;
-            width: 50%;
-            display: flex;
-            justify-self: center;
-            border-radius: 10%;
-        }
-
-        .tituloSegundoProyect {
-            grid-area: subtitulo2;
-            text-align: center;
-            color: $color-textos;
-        }
-
-        .parrafoSegundoProyect {
-            grid-area: parrafo2;
-            text-align: center;
-            padding: 2.5rem;
-            color: $color-textos;
-        }
-
-        .linkPag1{
-            text-decoration: none;
-            font-weight: bold;
-            border-bottom: 1px solid transparent;
-            &:hover{
-                border-bottom: 1px solid $color-textos;
-                width: 100%;
-                height: 100%;
-                transition: 2s;
-            }
-        }
         
-        .linkPag2{
-            text-decoration: none;
-            font-weight: bold;
-            border-bottom: 1px solid transparent;
-            &:hover{
-                border-bottom: 1px solid $color-textos;
-                width: 100%;
-                height: 100%;
-                transition: 2s;
-            }
-        }
-        
-        .footer{
-            .redesSociales a img{
-                width: 30%;
-            }
-        }
-    } 
+         .card{
+             margin: 30px 12rem;
+             .imgCard{
+                 position: relative;
+                 width: 300px;
+                 height: 300px;
+                 top: -60px;
+                 left: -4px;
+                }
+             }  
+    }
 
     
 }
-    .contenedorTrabajos{
-        @media only screen and (min-width:1024px){
-            .imgPag1{
-                width: 50%;
+.contenedorTrabajos{
+    @media only screen and (min-width:1024px){
+        
+        .card{
+             margin: 30px 12rem;
+             .imgCard{
+                 position: relative;
+                 width: 460px;
+                 height: 460px;
+                 top: -60px;
+                 left: 5px;
             }
-            .imgPag2{
-                width: 50%;
-            }
-            .parrafoSegundoProyect{
-                margin-bottom: 15rem;
-                font-size: 1.4rem;
-            }
-            .parrafoPrimerProyect{
-               font-size: 1.4rem;
-            }
-        }
-    
+        }        
     }
+    
+}
     /* aca termina el css de conocimiento y empieza el de sobre mi*/
 
  .contenedorSobreMi{

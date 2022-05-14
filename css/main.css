@@ -11,8 +11,6 @@ header {
       transform: translateY(3px);
       border-bottom: 1px solid #500808;
       color: #500808; }
-  header div ul li .ulContact {
-    font-weight: bold; }
   header div ul li a {
     font-size: 1.2rem; }
   header div ul li .info {
@@ -28,8 +26,7 @@ header {
 body {
   background-color: #000;
   position: relative;
-  padding-bottom: 3rem;
-  font-family: 'Quicksand', sans-serif; }
+  padding-bottom: 3rem; }
 
 footer {
   background-color: #690808;
@@ -57,13 +54,6 @@ footer {
     footer .parrafoFooter .derechosReservados {
       color: #FFFFFF; }
 
-.contenedorTrabajos .imgPag1, .contenedorTrabajos .imgPag2 {
-  margin-top: 2.2rem;
-  margin-bottom: 2.2rem;
-  width: 15rem;
-  display: flex;
-  justify-self: center; }
-
 /* reset */
 * {
   margin: 0%;
@@ -75,7 +65,7 @@ footer {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-areas: "imagen " "contenido" "footer ";
+  grid-template-areas: "imagen " "contenido" "frase" "servicios" "footer ";
   justify-content: center; }
   .contenedor .contenedorMain .fotoIndex {
     grid-area: imagen;
@@ -87,24 +77,6 @@ footer {
     grid-area: contenido;
     display: grid;
     grid-template-areas: "titulo" "parrafo"; }
-    .contenedor .contenedorMain .slogan1 .tituloIndex {
-      grid-area: titulo;
-      color: #FFFFFF;
-      font-weight: bold;
-      text-align: center;
-      font-family: 'Open Sans', sans-serif;
-      font-family: 'Roboto', sans-serif;
-      font-size: 3.5rem;
-      margin-top: 30px;
-      margin-bottom: 30px; }
-      .contenedor .contenedorMain .slogan1 .tituloIndex .tituloIndexFrase {
-        display: block;
-        font-size: 3rem;
-        font-family: 'Calligraffitti', cursive; }
-      .contenedor .contenedorMain .slogan1 .tituloIndex .sinBr {
-        display: block;
-        font-size: 3rem;
-        font-family: 'Calligraffitti', cursive; }
     .contenedor .contenedorMain .slogan1 .parrafoIndex {
       grid-area: parrafo;
       font-size: 1.8rem;
@@ -113,19 +85,96 @@ footer {
       color: #FFFFFF; }
     .contenedor .contenedorMain .slogan1 .TituloFoto img {
       display: none; }
+  .contenedor .contenedorMain .tituloServicios h2 {
+    color: #1B3989;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    display: block;
+    text-align: center; }
+  .contenedor .contenedorMain .servicios {
+    grid-area: servicios;
+    text-align: center; }
+    .contenedor .contenedorMain .servicios .cajaServicios {
+      background-color: lightgray;
+      margin: 0.7rem;
+      border: 2px solid #1B3989; }
+    .contenedor .contenedorMain .servicios .serviciosIndex {
+      color: #1B3989; }
+    .contenedor .contenedorMain .servicios .contenedorFrase .fraseIndexDiseño {
+      color: #1B3989;
+      font-size: 0.8rem; }
+      .contenedor .contenedorMain .servicios .contenedorFrase .fraseIndexDiseño .palabraDiseño {
+        margin: -0.2%;
+        font-size: 2rem;
+        transition: font-size, font-weight, color 0.2s;
+        transition-delay: 0.8s; }
+        .contenedor .contenedorMain .servicios .contenedorFrase .fraseIndexDiseño .palabraDiseño:hover {
+          font-size: 3rem;
+          transition: font-size 0.2s;
+          color: #690808;
+          font-weight: bold; }
+      .contenedor .contenedorMain .servicios .contenedorFrase .fraseIndexDiseño .letraP {
+        padding-left: 0.5rem; }
+      .contenedor .contenedorMain .servicios .contenedorFrase .fraseIndexDiseño .palabraPersonalizado {
+        margin: -0.2%;
+        font-size: 2rem;
+        transition: font-size, font-weight, color 0.2s;
+        transition-delay: 0.8s; }
+        .contenedor .contenedorMain .servicios .contenedorFrase .fraseIndexDiseño .palabraPersonalizado:hover {
+          font-size: 3rem;
+          transition: font-size 0.2s;
+          color: #690808;
+          font-weight: bold; }
+    .contenedor .contenedorMain .servicios .contResponsive {
+      color: #1B3989; }
+      .contenedor .contenedorMain .servicios .contResponsive .responsiveIndex {
+        font-size: 2rem;
+        transition: font-size 1s;
+        transition-delay: 0.8s; }
+        .contenedor .contenedorMain .servicios .contResponsive .responsiveIndex:hover {
+          font-size: 3rem;
+          transition: font-size 1s; }
+    .contenedor .contenedorMain .servicios .contSeo {
+      cursor: url(../img/lupa.png), auto; }
+      .contenedor .contenedorMain .servicios .contSeo .tituloSeo {
+        color: #1B3989;
+        font-size: 2rem; }
+    .contenedor .contenedorMain .servicios .parrafosServicios {
+      color: #000;
+      font-size: 1.3rem; }
   .contenedor .contenedorMain footer {
     grid-area: footer; }
+  .contenedor .fraseIndex {
+    display: grid;
+    grid-area: frase; }
+    .contenedor .fraseIndex .tituloIndex {
+      grid-area: titulo;
+      color: #FFFFFF;
+      font-weight: bold;
+      text-align: center;
+      font-family: 'Aclonica', sans-serif;
+      font-size: 2rem;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-size: 1.5rem; }
+      .contenedor .fraseIndex .tituloIndex .tituloIndexFrase {
+        display: block;
+        font-size: 1.5rem;
+        font-family: 'Calligraffitti', cursive; }
+      .contenedor .fraseIndex .tituloIndex .sinBr {
+        display: block;
+        font-size: 1.5rem;
+        font-family: 'Calligraffitti', cursive; }
   @media only screen and (min-width: 650px) {
     .contenedor .contenedorMain {
       display: grid;
-      grid-template-areas: "contenido imagen" "contenido imagen ";
+      grid-template-areas: "contenido imagen" "contenido frase " "tituloS tituloS" "servicios servicios" "footer footer";
       justify-content: center;
       grid-template-columns: 50% 50%;
       column-gap: 0rem; }
       .contenedor .contenedorMain .fotoIndex {
         display: flex;
-        width: 100%;
-        margin-bottom: 33rem; }
+        width: 100%; }
       .contenedor .contenedorMain .slogan1 {
         grid-template-areas: "tituloFoto" "titulo" "parrafo";
         column-gap: 1rem; }
@@ -139,16 +188,6 @@ footer {
             display: block;
             height: auto;
             width: auto; }
-        .contenedor .contenedorMain .slogan1 .tituloIndex {
-          grid-area: titulo;
-          color: #FFFFFF;
-          font-weight: bold;
-          text-align: center;
-          font-family: 'Open Sans', sans-serif;
-          font-family: 'Roboto', sans-serif;
-          font-size: 3.5rem;
-          margin-top: 30px;
-          margin-bottom: 30px; }
         .contenedor .contenedorMain .slogan1 .parrafoIndex {
           grid-area: parrafo;
           font-weight: bold;
@@ -156,11 +195,28 @@ footer {
           text-align: center;
           margin-left: 0rem;
           margin-bottom: 15rem;
-          margin-right: 0rem; } }
+          margin-right: 0rem; }
+      .contenedor .contenedorMain .fraseIndex {
+        margin-bottom: 10rem;
+        margin-right: 8rem; }
+        .contenedor .contenedorMain .fraseIndex .tituloIndex {
+          grid-area: titulo;
+          color: #FFFFFF;
+          font-weight: bold;
+          text-align: center;
+          font-family: 'Aclonica', sans-serif;
+          font-size: 2rem;
+          margin-top: 30px;
+          margin-bottom: 30px; }
+      .contenedor .contenedorMain .tituloServicios {
+        grid-area: tituloS; }
+      .contenedor .contenedorMain .servicios {
+        grid-area: servicios;
+        text-align: start; } }
   @media only screen and (min-width: 1024px) {
     .contenedor .contenedorMain {
       display: grid;
-      grid-template-areas: "contenido imagen" "contenido imagen ";
+      grid-template-areas: "contenido imagen" "contenido frase" "tituloS tituloS" "servicios servicios" "footer footer";
       justify-content: center;
       grid-template-columns: 60% 40%;
       column-gap: 0rem; }
@@ -169,147 +225,136 @@ footer {
         width: 80%; }
       .contenedor .contenedorMain .slogan1 {
         width: 100%; }
-        .contenedor .contenedorMain .slogan1 .tituloIndex {
-          font-size: 2rem;
-          padding-top: 2rem;
-          margin-top: 2rem; }
         .contenedor .contenedorMain .slogan1 .parrafoIndex {
           font-size: 1.2rem;
           margin-left: 5rem;
           margin-bottom: 15rem;
-          margin-right: 5rem; } }
+          margin-right: 5rem; }
+      .contenedor .contenedorMain .tituloServicios h2 {
+        color: #006eff;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        display: block; }
+      .contenedor .contenedorMain .servicios {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-area: servicios; }
+        .contenedor .contenedorMain .servicios .serviciosIndex {
+          color: #1B3989; }
+        .contenedor .contenedorMain .servicios .contenedorFrase .fraseIndexDiseño {
+          color: #1B3989; }
+          .contenedor .contenedorMain .servicios .contenedorFrase .fraseIndexDiseño .palabraDiseño {
+            margin: -0.2%;
+            font-size: 2rem;
+            transition: font-size, font-weight, color 0.2s;
+            transition-delay: 0.8s; }
+            .contenedor .contenedorMain .servicios .contenedorFrase .fraseIndexDiseño .palabraDiseño:hover {
+              font-size: 3rem;
+              transition: font-size 0.2s;
+              color: #690808;
+              font-weight: bold; }
+          .contenedor .contenedorMain .servicios .contenedorFrase .fraseIndexDiseño .letraP {
+            padding-left: 0.5rem; }
+          .contenedor .contenedorMain .servicios .contenedorFrase .fraseIndexDiseño .palabraPersonalizado {
+            margin: -0.2%;
+            font-size: 2rem;
+            transition: font-size, font-weight, color 0.2s;
+            transition-delay: 0.8s; }
+            .contenedor .contenedorMain .servicios .contenedorFrase .fraseIndexDiseño .palabraPersonalizado:hover {
+              font-size: 3rem;
+              transition: font-size 0.2s;
+              color: #690808;
+              font-weight: bold; }
+        .contenedor .contenedorMain .servicios .contResponsive {
+          color: #1B3989; }
+          .contenedor .contenedorMain .servicios .contResponsive .responsiveIndex {
+            font-size: 2rem;
+            transition: font-size 1s;
+            transition-delay: 0.8s; }
+            .contenedor .contenedorMain .servicios .contResponsive .responsiveIndex:hover {
+              font-size: 3rem;
+              transition: font-size 1s; }
+        .contenedor .contenedorMain .servicios .contSeo {
+          color: #1B3989; }
+        .contenedor .contenedorMain .servicios .parrafosServicios {
+          color: #000;
+          font-size: 1.3rem; }
+      .contenedor .contenedorMain footer {
+        grid-area: footer; } }
 
 /*acá termina el Css del index y arranca el de "trabajos"*/
 .contenedorTrabajos {
-  display: grid;
-  grid-template-areas: "titulo" "subtitulo1" "foto1" "parrafo1" "subtitulo2" "foto2" "parrafo2" "footer"; }
-  .contenedorTrabajos .titulosHtml {
-    grid-area: titulo;
-    color: #FFFFFF;
-    font-weight: bold;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    font-size: 3.5rem;
-    margin-top: 30px;
-    margin-bottom: 30px; }
-  .contenedorTrabajos .imgPag1 {
-    grid-area: foto1;
-    width: 100%; }
-  .contenedorTrabajos .tituloPrimerProyect {
-    text-align: center;
-    grid-area: subtitulo1;
-    color: #FFFFFF; }
-  .contenedorTrabajos .parrafoPrimerProyect {
-    grid-area: parrafo1;
-    text-align: center;
-    padding: 2.5rem;
-    color: #FFFFFF; }
-  .contenedorTrabajos .imgPag2 {
-    grid-area: foto2;
-    width: 100%; }
-  .contenedorTrabajos .tituloSegundoProyect {
-    grid-area: subtitulo2;
-    text-align: center;
-    color: #FFFFFF; }
-  .contenedorTrabajos .parrafoSegundoProyect {
-    grid-area: parrafo2;
-    text-align: center;
-    padding: 2.5rem;
-    color: #FFFFFF;
-    margin-bottom: 10rem; }
-  .contenedorTrabajos .linkPag1 {
-    text-decoration: none;
-    color: #690808; }
-  .contenedorTrabajos .linkPag2 {
-    text-decoration: none;
-    color: #690808; }
-  .contenedorTrabajos .comentarios-proyect {
-    font-weight: bold;
-    font-size: 1.1rem; }
-  .contenedorTrabajos footer {
-    grid-area: footer; }
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px; }
+  .contenedorTrabajos .card {
+    position: relative;
+    width: 500px;
+    height: 320px;
+    margin: 30px 1rem;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 50px rgba(255, 255, 255, 0.5);
+    transition: 0.3s ease-in-out; }
+    .contenedorTrabajos .card:hover {
+      height: 620px; }
+      .contenedorTrabajos .card:hover .contCard {
+        visibility: visible;
+        opacity: 1;
+        margin-top: -40px;
+        transition-delay: 0.3s; }
+    .contenedorTrabajos .card .imgCard {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      top: -30px;
+      left: 3px;
+      box-shadow: 0 5px 20px rgba 255, 255, 255, 0.2; }
+      .contenedorTrabajos .card .imgCard img {
+        width: 100%; }
+    .contenedorTrabajos .card .contCard {
+      position: relative;
+      margin-top: -140px;
+      padding: 10px 15px;
+      text-align: center;
+      color: #690808;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.3s ease-in-out; }
+      .contenedorTrabajos .card .contCard .spanTrabajos {
+        font-weight: bold; }
+
+footer {
+  grid-area: footer; }
+
+.footerTrabajos {
+  position: relative;
+  top: 20rem; }
 
 @media only screen and (min-width: 650px) {
-  .contenedorTrabajos {
-    display: grid;
-    grid-template-areas: "titulo titulo" "foto1 subtitulo1" "foto1 parrafo1" "foto2 subtitulo2" "foto2 parrafo2" "footer footer";
-    grid-template-columns: 1fr 1fr;
-    row-gap: 5rem; }
-    .contenedorTrabajos .titulosHtml {
-      grid-area: titulo;
-      color: #FFFFFF;
-      font-weight: bold;
-      text-align: center;
-      font-family: 'Open Sans', sans-serif;
-      font-family: 'Roboto', sans-serif;
-      font-size: 3.5rem;
-      margin-top: 30px;
-      margin-bottom: 30px; }
-    .contenedorTrabajos .imgPag1 {
-      grid-area: foto1;
-      margin-top: 2.2rem;
-      margin-bottom: 2.2rem;
-      width: 50%;
-      display: flex;
-      justify-self: center;
-      border-radius: 10%; }
-    .contenedorTrabajos .tituloPrimerProyect {
-      grid-area: subtitulo1;
-      color: #FFFFFF; }
-    .contenedorTrabajos .parrafoPrimerProyect {
-      grid-area: parrafo1;
-      text-align: center;
-      padding: 2.5rem;
-      color: #FFFFFF; }
-    .contenedorTrabajos .imgPag2 {
-      grid-area: foto2;
-      margin-top: 2.2rem;
-      margin-bottom: 2.2rem;
-      width: 50%;
-      display: flex;
-      justify-self: center;
-      border-radius: 10%; }
-    .contenedorTrabajos .tituloSegundoProyect {
-      grid-area: subtitulo2;
-      text-align: center;
-      color: #FFFFFF; }
-    .contenedorTrabajos .parrafoSegundoProyect {
-      grid-area: parrafo2;
-      text-align: center;
-      padding: 2.5rem;
-      color: #FFFFFF; }
-    .contenedorTrabajos .linkPag1 {
-      text-decoration: none;
-      font-weight: bold;
-      border-bottom: 1px solid transparent; }
-      .contenedorTrabajos .linkPag1:hover {
-        border-bottom: 1px solid #FFFFFF;
-        width: 100%;
-        height: 100%;
-        transition: 2s; }
-    .contenedorTrabajos .linkPag2 {
-      text-decoration: none;
-      font-weight: bold;
-      border-bottom: 1px solid transparent; }
-      .contenedorTrabajos .linkPag2:hover {
-        border-bottom: 1px solid #FFFFFF;
-        width: 100%;
-        height: 100%;
-        transition: 2s; }
-    .contenedorTrabajos .footer .redesSociales a img {
-      width: 30%; } }
+  .contenedorTrabajos .card {
+    margin: 30px 12rem; }
+    .contenedorTrabajos .card .imgCard {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      top: -60px;
+      left: -4px; } }
 
 @media only screen and (min-width: 1024px) {
-  .contenedorTrabajos .imgPag1 {
-    width: 50%; }
-  .contenedorTrabajos .imgPag2 {
-    width: 50%; }
-  .contenedorTrabajos .parrafoSegundoProyect {
-    margin-bottom: 15rem;
-    font-size: 1.4rem; }
-  .contenedorTrabajos .parrafoPrimerProyect {
-    font-size: 1.4rem; } }
+  .contenedorTrabajos .card {
+    margin: 30px 12rem; }
+    .contenedorTrabajos .card .imgCard {
+      position: relative;
+      width: 460px;
+      height: 460px;
+      top: -60px;
+      left: 5px; } }
 
 /* aca termina el css de conocimiento y empieza el de sobre mi*/
 .contenedorSobreMi .parrafoSobreMi {
@@ -334,9 +379,8 @@ footer {
   color: #FFFFFF;
   font-weight: bold;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Roboto', sans-serif;
-  font-size: 3.5rem;
+  font-family: 'Aclonica', sans-serif;
+  font-size: 2rem;
   margin-top: 30px;
   margin-bottom: 30px; }
 
@@ -374,9 +418,8 @@ footer {
   color: #FFFFFF;
   font-weight: bold;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Roboto', sans-serif;
-  font-size: 3.5rem;
+  font-family: 'Aclonica', sans-serif;
+  font-size: 2rem;
   margin-top: 30px;
   margin-bottom: 30px; }
 
